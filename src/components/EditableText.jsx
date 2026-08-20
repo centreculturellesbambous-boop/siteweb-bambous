@@ -45,8 +45,17 @@ const EditableText = ({
         if (!isEditable) return;
         e.stopPropagation();
         e.preventDefault();
-        setEditValue(value || '');
-        setIsEditing(true);
+        if (type === 'image') {
+            setIsMediaModalOpen(true);
+        } else {
+            setEditValue(value || '');
+            setIsEditing(true);
+        }
+    };
+
+    const handleSaveImage = async (newUrl) => {
+        await updateFieldContent(fieldPath, newUrl);
+        setIsMediaModalOpen(false);
     };
 
     const handleSave = async (e) => {
@@ -226,8 +235,8 @@ const EditableText = ({
             <MediaLibraryModal
                 isOpen={isMediaModalOpen}
                 onClose={() => setIsMediaModalOpen(false)}
-                currentUrl={editValue}
-                onSelectImage={(newUrl) => setEditValue(newUrl)}
+                currentUrl={value || editValue}
+                onSelectImage={handleSaveImage}
             />
         </Tag>
     );
