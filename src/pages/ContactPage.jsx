@@ -50,7 +50,6 @@ const ContactPage = () => {
 
     return (
         <div className="contact-page">
-            <InlineAdminBar />
             <section className="page-header bg-dark">
                 <div className="container text-center">
                     <motion.h1

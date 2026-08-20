@@ -61,9 +61,6 @@ const HomePage = () => {
 
     return (
         <div className="home-page">
-            {/* Inline Admin Bar */}
-            <InlineAdminBar />
-
             {/* 2. Hero Section */}
             <section className="hero-section">
                 <HeroSlider slides={home.hero} />

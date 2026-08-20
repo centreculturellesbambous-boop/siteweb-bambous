@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import { AuthProvider } from './context/AuthContext';
 import { EditModeProvider } from './context/EditModeContext';
 import { useEditMode } from './context/useEditMode';
+import InlineAdminBar from './components/InlineAdminBar';
 import './App.css';
 
 // Lazy-loaded pages for code splitting & optimal performance
@@ -62,6 +63,7 @@ function AppContent() {
 
   return (
     <div className={`app-container device-mode-${deviceView}`}>
+      <InlineAdminBar />
       {deviceView !== 'desktop' && (
         <div className="device-simulator-indicator">
           <span>📱 Aperçu Écran : <strong>{deviceView === 'mobile' ? 'Mobile Smartphone (390px)' : 'Tablette (768px)'}</strong></span>
