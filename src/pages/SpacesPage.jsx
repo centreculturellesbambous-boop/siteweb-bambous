@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import content from '../data/content.json';
-
+import { subscribeToContent } from '../lib/contentService';
+import EditableText from '../components/EditableText';
+import initialContent from '../data/content.json';
 import '../styles/SpacesPage.css';
 
 const SpacesPage = () => {
-    const { spaces } = content;
+    const [siteContent, setSiteContent] = useState(initialContent);
+
+    useEffect(() => {
+        const unsub = subscribeToContent(({ content }) => {
+            setSiteContent(content);
+        });
+        return () => unsub();
+    }, []);
+
+    const { spaces = initialContent.spaces } = siteContent;
 
     return (
         <div className="spaces-page">
@@ -26,7 +36,7 @@ const SpacesPage = () => {
                     <div className="spaces-list">
                         {spaces.map((space, index) => (
                             <motion.div
-                                key={space.id}
+                                key={space.id || index}
                                 className={`detailed-space-item ${index % 2 !== 0 ? 'reverse' : ''}`}
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -34,13 +44,33 @@ const SpacesPage = () => {
                                 transition={{ duration: 0.8, ease: "easeOut" }}
                             >
                                 <div className="slide-image-container">
-                                    <img src={space.image} alt={space.title} />
+                                    <EditableText
+                                        fieldPath={`spaces.${index}.image`}
+                                        value={space.image}
+                                        type="image"
+                                        label={`Photo ${space.title}`}
+                                    >
+                                        <img src={space.image} alt={space.title} />
+                                    </EditableText>
                                     <div className="image-overlay-institutional"></div>
                                 </div>
                                 <div className="slide-content-institutional">
                                     <span className="section-tag">Équipement Professionnel</span>
-                                    <h2>{space.title}</h2>
-                                    <p className="narrative-text">{space.description}</p>
+                                    <h2>
+                                        <EditableText
+                                            fieldPath={`spaces.${index}.title`}
+                                            value={space.title}
+                                            label="Titre Espace"
+                                        />
+                                    </h2>
+                                    <p className="narrative-text">
+                                        <EditableText
+                                            fieldPath={`spaces.${index}.description`}
+                                            value={space.description}
+                                            type="textarea"
+                                            label="Description Espace"
+                                        />
+                                    </p>
 
                                     <div className="technical-specs">
                                         <div className="spec-item">

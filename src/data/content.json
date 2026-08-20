@@ -198,6 +198,71 @@
             "places": "Ouvertes"
         }
     ],
+    "activities": [
+        {
+            "id": "cours-de-danse",
+            "title": "Cours de Danse",
+            "category": "Danse",
+            "dates": "Tous les Mercredis de 18h à 20h",
+            "statusBadge": "HEBDOMADAIRE",
+            "image": "/images/cours-de-danse.jpg",
+            "description": "Cours de danse africaine, contemporaine et traditionnelle ouverts à tous les niveaux."
+        },
+        {
+            "id": "camp-vacances-2026",
+            "title": "Camp Vacances Culture 2026",
+            "category": "Camps Vacances Culture",
+            "dates": "20 Juillet — 15 Août 2026",
+            "statusBadge": "JEUNESSE",
+            "image": "/images/cvc2026.jpeg",
+            "description": "Grand rendez-vous éducatif et artistique pour les enfants : Musique, Chant, Danse, Peinture, Slam et Conte."
+        },
+        {
+            "id": "cours-de-musique",
+            "title": "Cours de Musique & Percussions",
+            "category": "Musique",
+            "dates": "Cours hebdomadaires",
+            "statusBadge": "PERMANENT",
+            "image": "/images/formation.jpeg",
+            "description": "Apprentissage d'instruments traditionnels et modernes : balafon, kora, djembe, guitare et percussions."
+        },
+        {
+            "id": "residences-de-creation",
+            "title": "Résidences de Création",
+            "category": "Résidence",
+            "dates": "Sessions de 2 à 4 semaines",
+            "statusBadge": "PROMOTION",
+            "image": "/images/st-residence.jpg",
+            "description": "Accompagnement et accueil d'artistes en résidence pour développer et concrétiser leurs créations."
+        },
+        {
+            "id": "cafe-concert-jam",
+            "title": "Café-Concert & Jam Sessions",
+            "category": "Concert Live",
+            "dates": "Tous les Vendredis Soir (Dès 20h30)",
+            "statusBadge": "HEBDOMADAIRE",
+            "image": "/images/live.jpg",
+            "description": "Scène ouverte, prestations live et moments d'échanges conviviaux sur la terrasse du Centre."
+        },
+        {
+            "id": "concerts-live-grande-scene",
+            "title": "Concerts Live — Grande Scène",
+            "category": "Concert Live",
+            "dates": "Tous les Samedis Soir (Dès 21h00)",
+            "statusBadge": "HEBDOMADAIRE",
+            "image": "/images/scene.jpg",
+            "description": "Grands concerts live et performances sur la Grande Scène Victor Dème."
+        },
+        {
+            "id": "ateliers-peinture",
+            "title": "Ateliers de Peinture",
+            "category": "Arts Plastiques",
+            "dates": "Ateliers de vacances",
+            "statusBadge": "ATELIER",
+            "image": "/images/arts plastique.jpeg",
+            "description": "Explorez les arts plastiques à travers des ateliers de peinture alliant techniques modernes et inspirations africaines."
+        }
+    ],
     "partners": [
         {
             "id": 1,

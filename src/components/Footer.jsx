@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Youtube, MapPin, Phone, Mail } from 'lucide-react';
 import { subscribeToContent } from '../lib/contentService';
+import EditableText from './EditableText';
 import initialContent from '../data/content.json';
 import '../styles/Footer.css';
 
@@ -55,9 +56,36 @@ const Footer = () => {
                 <div className="footer-section">
                     <h4>Contact</h4>
                     <ul className="footer-contact-list">
-                        <li><MapPin size={18} /> {siteMetadata.contact.address}</li>
-                        <li><Phone size={18} /> {siteMetadata.contact.phone}</li>
-                        <li><Mail size={18} /> {siteMetadata.contact.email}</li>
+                        <li>
+                            <MapPin size={18} />
+                            <EditableText
+                                fieldPath="siteMetadata.contact.address"
+                                value={siteMetadata.contact.address}
+                                label="Adresse Physique"
+                            >
+                                <span>{siteMetadata.contact.address}</span>
+                            </EditableText>
+                        </li>
+                        <li>
+                            <Phone size={18} />
+                            <EditableText
+                                fieldPath="siteMetadata.contact.phone"
+                                value={siteMetadata.contact.phone}
+                                label="Téléphone(s)"
+                            >
+                                <span>{siteMetadata.contact.phone}</span>
+                            </EditableText>
+                        </li>
+                        <li>
+                            <Mail size={18} />
+                            <EditableText
+                                fieldPath="siteMetadata.contact.email"
+                                value={siteMetadata.contact.email}
+                                label="Email Officiel"
+                            >
+                                <span>{siteMetadata.contact.email}</span>
+                            </EditableText>
+                        </li>
                     </ul>
                 </div>
             </div>

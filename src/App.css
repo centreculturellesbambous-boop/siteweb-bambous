@@ -19,7 +19,34 @@
   /* Hero slider goes under transparent header */
 }
 
-/* Ensure footer sticks to bottom */
-.footer {
-  width: 100%;
+.device-simulator-indicator {
+  background: #059669;
+  color: #ffffff;
+  text-align: center;
+  padding: 0.4rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(5, 150, 105, 0.3);
+  position: sticky;
+  top: 45px;
+  z-index: 999;
+}
+
+.device-mode-mobile,
+.device-mode-tablet {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  margin: 1.5rem auto;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.5), 0 0 0 12px #18181b;
+}
+
+.device-mode-mobile {
+  max-width: 390px !important;
+  min-height: 844px;
+}
+
+.device-mode-tablet {
+  max-width: 768px !important;
+  min-height: 1024px;
 }

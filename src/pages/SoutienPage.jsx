@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
     Heart,
@@ -13,11 +13,22 @@ import {
     Lock,
     ExternalLink
 } from 'lucide-react';
-import content from '../data/content.json';
+import { subscribeToContent } from '../lib/contentService';
+import EditableText from '../components/EditableText';
+import initialContent from '../data/content.json';
 import '../styles/SoutienPage.css';
 
 const SoutienPage = () => {
-    const { soutien } = content;
+    const [siteContent, setSiteContent] = useState(initialContent);
+
+    useEffect(() => {
+        const unsub = subscribeToContent(({ content }) => {
+            setSiteContent(content);
+        });
+        return () => unsub();
+    }, []);
+
+    const { soutien = initialContent.soutien } = siteContent;
 
     return (
         <div className="soutien-page">
@@ -102,7 +113,14 @@ const SoutienPage = () => {
                             </ul>
                         </div>
                         <div className="image-block">
-                            <img src={soutien.artists_image} alt="Artistes en résidence" className="rounded-shadow" />
+                            <EditableText
+                                fieldPath="soutien.artists_image"
+                                value={soutien.artists_image}
+                                type="image"
+                                label="Photo Section Artistes"
+                            >
+                                <img src={soutien.artists_image} alt="Artistes en résidence" className="rounded-shadow" />
+                            </EditableText>
                         </div>
                     </div>
                 </div>
@@ -113,7 +131,14 @@ const SoutienPage = () => {
                 <div className="container">
                     <div className="columns-2 align-center reverse-mobile">
                         <div className="image-block">
-                            <img src={soutien.holiday_camps_image} alt="Camp de vacances culturel" className="rounded-shadow" />
+                            <EditableText
+                                fieldPath="soutien.holiday_camps_image"
+                                value={soutien.holiday_camps_image}
+                                type="image"
+                                label="Photo Section Camps de Vacances"
+                            >
+                                <img src={soutien.holiday_camps_image} alt="Camp de vacances culturel" className="rounded-shadow" />
+                            </EditableText>
                         </div>
                         <div className="content-block">
                             <h2 className="section-title">Camps de Vacances Culturels</h2>

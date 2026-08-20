@@ -56,10 +56,16 @@ const ScrollToTop = () => {
 
 function AppContent() {
   const { pathname } = useLocation();
+  const { deviceView } = useEditMode();
   const isHome = pathname === '/';
 
   return (
-    <div className="app-container">
+    <div className={`app-container device-mode-${deviceView}`}>
+      {deviceView !== 'desktop' && (
+        <div className="device-simulator-indicator">
+          <span>📱 Aperçu Écran : <strong>{deviceView === 'mobile' ? 'Mobile Smartphone (390px)' : 'Tablette (768px)'}</strong></span>
+        </div>
+      )}
       <Header />
       <main className={`main-content ${isHome ? 'home-layout' : 'page-layout'}`}>
         <Suspense fallback={<PageLoader />}>

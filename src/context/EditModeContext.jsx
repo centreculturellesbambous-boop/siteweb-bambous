@@ -10,6 +10,8 @@ export const EditModeProvider = ({ children }) => {
         }
     });
 
+    const [deviceView, setDeviceView] = useState('desktop'); // 'desktop' | 'tablet' | 'mobile'
+
     const toggleVisualEditMode = () => {
         setIsVisualEditMode(prev => {
             const next = !prev;
@@ -23,7 +25,13 @@ export const EditModeProvider = ({ children }) => {
     };
 
     return (
-        <EditModeContext.Provider value={{ isVisualEditMode, toggleVisualEditMode, setIsVisualEditMode }}>
+        <EditModeContext.Provider value={{
+            isVisualEditMode,
+            toggleVisualEditMode,
+            setIsVisualEditMode,
+            deviceView,
+            setDeviceView
+        }}>
             {children}
         </EditModeContext.Provider>
     );

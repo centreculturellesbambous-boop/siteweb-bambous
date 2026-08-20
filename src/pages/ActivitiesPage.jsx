@@ -1,18 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Music2, Palette, Home, Sun, Music, Clock, Users, CheckCircle, X, MessageCircle, Mail } from 'lucide-react';
-import content from '../data/content.json';
+import { subscribeToContent } from '../lib/contentService';
+import EditableText from '../components/EditableText';
+import initialContent from '../data/content.json';
 import '../styles/ActivitiesPage.css';
 
 const icons = [Music2, Palette, Home, Sun, Music];
 
-// Infos de contact extraites du JSON
-const { email, phone } = content.siteMetadata.contact;
-// Deuxième numéro = WhatsApp (+226 72 48 32 21)
-const whatsappNumber = phone.split('/')[1].replace(/\s+/g, '').replace('+', '');
-
 const ProgramsPage = () => {
-    const { programs } = content;
+    const [siteContent, setSiteContent] = useState(initialContent);
+
+    useEffect(() => {
+        const unsub = subscribeToContent(({ content }) => {
+            setSiteContent(content);
+        });
+        return () => unsub();
+    }, []);
+
+    const { programs = initialContent.programs, siteMetadata = initialContent.siteMetadata } = siteContent;
+    const { email, phone } = siteMetadata.contact;
+    const whatsappNumber = phone ? phone.split('/')[1]?.replace(/\s+/g, '').replace('+', '') || '22672483221' : '22672483221';
 
     // État du modal d'inscription
     const [selectedProg, setSelectedProg] = useState(null);
@@ -59,10 +67,10 @@ const ProgramsPage = () => {
                 <div className="container">
                     <div className="programs-grid">
                         {programs.map((prog, index) => {
-                            const Icon = icons[index] || Music2;
+                            const Icon = icons[index % icons.length] || Music2;
                             return (
                                 <motion.div
-                                    key={prog.id}
+                                    key={prog.id || index}
                                     className="program-card"
                                     initial={{ opacity: 0, y: 40 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +78,14 @@ const ProgramsPage = () => {
                                     transition={{ delay: index * 0.1, duration: 0.6 }}
                                 >
                                     <div className="program-image-container">
-                                        <img src={prog.image} alt={prog.title} loading="lazy" />
+                                        <EditableText
+                                            fieldPath={`programs.${index}.image`}
+                                            value={prog.image}
+                                            type="image"
+                                            label={`Photo ${prog.title}`}
+                                        >
+                                            <img src={prog.image} alt={prog.title} loading="lazy" />
+                                        </EditableText>
                                         <div className="program-overlay-readability"></div>
 
                                         {/* Icône */}
@@ -80,8 +95,21 @@ const ProgramsPage = () => {
 
                                         {/* Contenu texte */}
                                         <div className="program-content-overlay">
-                                            <h3>{prog.title}</h3>
-                                            <p>{prog.description}</p>
+                                            <h3>
+                                                <EditableText
+                                                    fieldPath={`programs.${index}.title`}
+                                                    value={prog.title}
+                                                    label="Titre Programme"
+                                                />
+                                            </h3>
+                                            <p>
+                                                <EditableText
+                                                    fieldPath={`programs.${index}.description`}
+                                                    value={prog.description}
+                                                    type="textarea"
+                                                    label="Description Programme"
+                                                />
+                                            </p>
 
                                             {/* Badges */}
                                             {(prog.duree || prog.niveau || prog.places) && (
@@ -89,19 +117,38 @@ const ProgramsPage = () => {
                                                     {prog.duree && (
                                                         <span className="meta-badge">
                                                             <Clock size={12} />
-                                                            {prog.duree}
+                                                            <EditableText
+                                                                fieldPath={`programs.${index}.duree`}
+                                                                value={prog.duree}
+                                                                label="Durée / Horaires"
+                                                            >
+                                                                <span>{prog.duree}</span>
+                                                            </EditableText>
                                                         </span>
                                                     )}
                                                     {prog.niveau && (
                                                         <span className="meta-badge">
                                                             <Users size={12} />
-                                                            {prog.niveau}
+                                                            <EditableText
+                                                                fieldPath={`programs.${index}.niveau`}
+                                                                value={prog.niveau}
+                                                                label="Niveau requis"
+                                                            >
+                                                                <span>{prog.niveau}</span>
+                                                            </EditableText>
                                                         </span>
                                                     )}
                                                     {prog.places && (
                                                         <span className={`meta-badge places-badge ${prog.places === 'Sur candidature' ? 'candidature' : 'ouvertes'}`}>
                                                             <CheckCircle size={12} />
-                                                            Places : {prog.places}
+                                                            Places :
+                                                            <EditableText
+                                                                fieldPath={`programs.${index}.places`}
+                                                                value={prog.places}
+                                                                label="Places / Inscription"
+                                                            >
+                                                                <span>{prog.places}</span>
+                                                            </EditableText>
                                                         </span>
                                                     )}
                                                 </div>

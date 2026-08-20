@@ -114,16 +114,35 @@ const ActivitiesSlider = ({ activities = DEFAULT_ACTIVITIES }) => {
                                 </EditableText>
                                 <div className="activity-badge-date">
                                     <Calendar size={13} />
-                                    <span>{act.dates}</span>
+                                    <EditableText
+                                        fieldPath={`activities.${index}.dates`}
+                                        value={act.dates}
+                                        label="Dates / Sessions"
+                                    >
+                                        <span>{act.dates}</span>
+                                    </EditableText>
                                 </div>
                                 {act.statusBadge && (
-                                    <span className="activity-status-pill">{act.statusBadge}</span>
+                                    <EditableText
+                                        fieldPath={`activities.${index}.statusBadge`}
+                                        value={act.statusBadge}
+                                        label="Badge Statut (ex: PROMOTION)"
+                                    >
+                                        <span className="activity-status-pill">{act.statusBadge}</span>
+                                    </EditableText>
                                 )}
                             </div>
 
                             <div className="activity-card-body">
                                 <span className="activity-category-tag">
-                                    <Tag size={12} /> {act.category}
+                                    <Tag size={12} />
+                                    <EditableText
+                                        fieldPath={`activities.${index}.category`}
+                                        value={act.category}
+                                        label="Catégorie"
+                                    >
+                                        <span>{act.category}</span>
+                                    </EditableText>
                                 </span>
 
                                 <h3 className="activity-card-title">

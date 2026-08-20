@@ -117,6 +117,49 @@
     color: #fff;
 }
 
+.device-switcher-pill {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(39, 39, 42, 0.9);
+    border: 1px solid rgba(63, 63, 70, 0.8);
+    border-radius: 8px;
+    padding: 2px;
+    margin-right: 0.5rem;
+}
+
+.device-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: transparent;
+    border: none;
+    color: #a1a1aa;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.55rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.device-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.device-btn.active {
+    background: #059669;
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(5, 150, 105, 0.4);
+}
+
+@media (max-width: 768px) {
+    .device-label {
+        display: none;
+    }
+}
+
 @media (max-width: 640px) {
     .hidden-mobile {
         display: none;
