@@ -4,6 +4,7 @@ import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import EditableText from './EditableText';
+import { useEditMode } from '../context/useEditMode';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -13,15 +14,35 @@ import '../styles/HeroSlider.css';
 
 const HeroSlider = ({ slides }) => {
     const [activeIndex, setActiveIndex] = useState(0);
+    const { isVisualEditMode } = useEditMode();
 
     return (
         <div className="hero-slider">
+            {isVisualEditMode && (
+                <div style={{
+                    position: 'absolute',
+                    top: 15,
+                    right: 20,
+                    zIndex: 100,
+                    background: 'rgba(147, 51, 234, 0.85)',
+                    color: '#fff',
+                    padding: '4px 12px',
+                    borderRadius: '20px',
+                    fontSize: '0.78rem',
+                    fontWeight: 600,
+                    backdropFilter: 'blur(8px)',
+                    border: '1px solid rgba(255,255,255,0.3)',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.3)'
+                }}>
+                    ⏸️ Défilement automatique figé (Mode Édition)
+                </div>
+            )}
             <Swiper
                 modules={[Navigation, Pagination, Autoplay, EffectFade]}
                 effect="fade"
                 fadeEffect={{ crossFade: true }}
                 speed={1500}
-                autoplay={{
+                autoplay={isVisualEditMode ? false : {
                     delay: 10000,
                     disableOnInteraction: false,
                 }}

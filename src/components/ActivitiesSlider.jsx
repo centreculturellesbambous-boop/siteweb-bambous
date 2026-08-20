@@ -3,8 +3,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Calendar, ArrowRight, Sparkles, Tag } from 'lucide-react';
+import { Calendar, ArrowRight, Tag } from 'lucide-react';
 import EditableText from './EditableText';
+import { useEditMode } from '../context/useEditMode';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -79,6 +80,7 @@ const DEFAULT_ACTIVITIES = [
 
 const ActivitiesSlider = ({ activities = DEFAULT_ACTIVITIES }) => {
     const list = activities && activities.length > 0 ? activities : DEFAULT_ACTIVITIES;
+    const { isVisualEditMode } = useEditMode();
 
     return (
         <div className="activities-slider-container">
@@ -86,7 +88,7 @@ const ActivitiesSlider = ({ activities = DEFAULT_ACTIVITIES }) => {
                 modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={24}
                 slidesPerView={1}
-                autoplay={{ delay: 4500, disableOnInteraction: false }}
+                autoplay={isVisualEditMode ? false : { delay: 4500, disableOnInteraction: false }}
                 breakpoints={{
                     640: { slidesPerView: 1.5 },
                     768: { slidesPerView: 2 },

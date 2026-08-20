@@ -4,6 +4,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import EditableText from './EditableText';
+import { useEditMode } from '../context/useEditMode';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -11,12 +12,15 @@ import 'swiper/css/pagination';
 import '../styles/SpacesSlider.css';
 
 const SpacesSlider = ({ spaces }) => {
+    const { isVisualEditMode } = useEditMode();
+
     return (
         <div className="spaces-slider-container">
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={30}
                 slidesPerView={1}
+                autoplay={isVisualEditMode ? false : { delay: 5000, disableOnInteraction: false }}
                 breakpoints={{
                     768: { slidesPerView: 2 },
                     1024: { slidesPerView: 3 }
