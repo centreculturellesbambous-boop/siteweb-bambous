@@ -1,0 +1,157 @@
+[
+    {
+        "id": 101,
+        "title": "CAFE CONCERT",
+        "category": "CONCERT LIVE",
+        "date": "2026-03-13",
+        "time": "21:00",
+        "description": "Café Concert les Frères Unis.",
+        "image": "/images/unis.jpeg"
+    },
+    {
+        "id": 102,
+        "title": "CONCERT SPECIAL RAMADAN",
+        "category": "CONCERT LIVE",
+        "date": "2026-03-20",
+        "time": "21:00",
+        "description": "Concert Spécial Ramadan avec SADA BA.",
+        "image": "/images/sadaramadan.jpeg"
+    },
+    {
+        "id": 103,
+        "title": "SNC 2026",
+        "category": "AUTRE",
+        "date": "2026-04-25",
+        "time": "00:00",
+        "description": "SNC 2026 : Réservez votre stand dès maintenant !\n\nÀ l'occasion de la Semaine Nationale de la Culture 2026, le Centre Culturel Les Bambous Idrissa Koné met à votre disposition des stands en location au sein de son espace.\n\nUne opportunité en or pour vous faire connaître.\n\nQue vous soyez :\n• Artisan\n• Créateur\n• Vendeur de produits locaux\n• Promoteur culturel\n• Entrepreneur\n\nProfitez de la forte affluence pour exposer, vendre et valoriser votre savoir-faire devant un large public passionné de culture.\n\nPrix du stand : 50 000 F CFA\n\nLieu : Centre Culturel Les Bambous Idrissa Koné\n\nInfos & Réservations :\n+226 65 31 14 33\n+226 78 26 27 67\n+226 70 33 23 44\n\nPlaces limitées. Réservez dès maintenant pour garantir votre visibilité pendant la SNC 2026.",
+        "image": "/images/stand.jpeg"
+    },
+    {
+        "id": 104,
+        "title": "MAYA DIYA",
+        "category": "CAFE CONCERT",
+        "date": "2026-04-03",
+        "time": "21:00",
+        "description": "Inspiré par le Maaya, cet humanisme mandingue fondé sur l’acceptation de l’autre et la fraternité, Maya Diya propose une musique riche et engagée. Sur scène, les sonorités profondes de la kora, du balafon et des percussions dialoguent avec la guitare, la basse et la batterie pour créer une identité sonore unique.\n\nLeur univers artistique, nourri par les réalités de l’Afrique de l’Ouest, aborde avec sensibilité des thèmes essentiels comme la cohésion sociale, l’amour du prochain et la jeunesse.\n\nLe 03 avril 2026, Maya Diya vous donne rendez-vous pour un café concert exceptionnel : une immersion musicale authentique, portée par quatre musiciens d’exception et une énergie profondément fraternelle.\n\n🔶 Une expérience où la musique devient lien, message et émotion.\n\n👉 Réservez dès maintenant et venez vivre Maya Diya en live.",
+        "image": "/images/maya02.jpeg"
+    },
+    {
+        "id": 105,
+        "title": "SADA BA",
+        "category": "CONCERT LIVE",
+        "date": "2026-04-04",
+        "time": "21:00",
+        "description": "Ce samedi 04 avril… il va se passer quelque chose aux Bambous.\n\nSADA BA monte sur scène.\nEt toi, t'as une seule chose à faire : venir.\n\nOn a préparé une nouvelle piste de danse. Pas pour faire joli…\nmais pour que tu puisses vraiment te lâcher.\n\nBonne musique, vraie ambiance, des gens qui veulent profiter…\nc'est ce genre de soirée.\n\nViens avec tes amis, viens avec ton énergie… ou viens juste comme tu es.\nMais viens.\n\nParce que certaines soirées, faut les vivre sur place.\n\n📍 Centre Culturel Les Bambous Idrissa Koné\n📅 04 avril 2026",
+        "image": "/images/Sada04042026.jpeg"
+    },
+    {
+        "id": 106,
+        "title": "EMOS",
+        "category": "CONCERT LIVE",
+        "date": "2026-04-11",
+        "time": "21:00",
+        "description": "Le samedi 11 avril 2026, la scène du Centre Culturel Les Bambous – Espace Idrissa Koné a vibré au rythme de l’artiste Emos. Devant un public conquis, le Colonel-musicien a livré une performance marquée par l'authenticité et le partage",
+        "image": "/images/emos.jpeg"
+    },
+    {
+        "id": 107,
+        "title": "SADA BA",
+        "category": "CONCERT LIVE",
+        "date": "2026-04-18",
+        "time": "21:00",
+        "description": "Ce samedi, la scène du Centre Culturel Les Bambous Idrissa Koné s’embrase !\n\nÀ partir de 21h00, viens vivre une soirée exceptionnelle avec l’artiste Sada Ba, une voix authentique de la musique burkinabè.\n\nOriginaire de Bobo-Dioulasso, Sada Ba séduit par un style unique mêlant sonorités africaines modernes et messages forts autour de l’amour, de la solidarité et du vivre-ensemble . Sur scène, il offre bien plus qu’un concert : une véritable expérience musicale riche en émotions.",
+        "image": "/images/Sada04042026.jpeg"
+    },
+    {
+        "id": 108,
+        "title": "Gaeenga parmis les hommes",
+        "category": "Cinema",
+        "date": "2026-04-23",
+        "time": "21:00",
+        "description": "Un film de Paul Sandaogo Kabré ",
+        "image": "/images/pr01.jpeg"
+    },
+    {
+        "id": 109,
+        "title": "SADA BA",
+        "category": "CONCERT LIVE",
+        "date": "2026-05-16",
+        "time": "21:00",
+        "description": "Venez vivre une soirée exceptionnelle avec l’artiste Sada Ba, une voix authentique de la musique burkinabè mêlant sonorités africaines modernes et messages forts.",
+        "image": "/images/SADA 0004.jpeg"
+    },
+    {
+        "id": 110,
+        "title": "LES FRERES UNIS",
+        "category": "CONCERT LIVE",
+        "date": "2026-05-15",
+        "time": "21:00",
+        "description": "Une soirée inoubliable mêlant jazz moderne et sonorités locales.",
+        "image": "/images/FR15.jpeg"
+    },
+    {
+        "id": 112,
+        "title": "SADA BA",
+        "category": "CONCERT LIVE",
+        "date": "2026-05-09",
+        "time": "21:00",
+        "description": "C'est avec une immense joie que nous vous invitons à revivre l'éclat de la culture burkinabè lors du Concert Spécial marquant la clôture de la Semaine Nationale de la Culture (SNC).\n\nVenez vibrer au rythme de la performance exceptionnelle de l'artiste SADA BA, qui nous a honorés de sa présence sur scène.",
+        "image": "/images/SADA 0001.jpeg"
+    },
+    {
+        "id": 113,
+        "title": "FREEMAN TAPILY",
+        "category": "CONCERT LIVE",
+        "date": "2026-05-23",
+        "time": "21:00",
+        "description": "C'est avec une immense joie que nous vous invitons à revivre l'éclat de la culture burkinabè lors de ce Concert.\n\nVenez vibrer au rythme de la performance exceptionnelle de l'artiste FREEMAN TAPILY, qui nous a honorés de sa présence sur scène.",
+        "image": "/images/FreeMan.jpeg"
+    },
+    {
+        "id": 114,
+        "title": "CONCERT SPECIAL TABASKI",
+        "category": "CONCERT LIVE",
+        "date": "2026-05-27",
+        "time": "21:00",
+        "description": "On se réjouit de vous retrouver pour fêter Tabaski avec vous.",
+        "image": "/images/tabaski2026.jpeg"
+    },
+    {
+        "id": 115,
+        "title": "CAMPS VACANCES CULTURE",
+        "category": "CAMPS VACANCES CULTURE",
+        "date": "2026-07-20",
+        "time": "09:00",
+        "description": "Le Centre Culturel Les Bambous Idrissa Koné a le plaisir de vous informer de la tenue officielle du Camp Vacances Culture 2026, un grand rendez-vous éducatif, artistique et culturel dédié aux enfants.\n\n📅 Du 20 juillet au 15 août 2026\n⏰ De 09H00 à 17H30 – du lundi au vendredi\n\nAu programme :\n\n🎵 Musique\n🎤 Chant\n💃 Danse\n🎨 Dessin, peinture et bien plus…\n📝 Slam et activités culturelles\n\nCe camp a pour objectif de permettre aux enfants d'apprendre, créer, s'exprimer et s'amuser dans un cadre éducatif, artistique et convivial.\n\n👧 Pour les enfants de 04 ans et plus.\n\n📍 Lieu : Centre Culturel Les Bambous Idrissa Koné\n\n💰 Frais d'inscription :\n• 1 semaine : 8 000 F\n• 21 jours : 30 000 F\n\n📞 Contacts :\n+226 65 31 14 33 / 72 48 32 21 / 56 70 90 40.",
+        "image": "/images/cvc2026.jpeg"
+    },
+    {
+        "id": 116,
+        "title": "CONCERT LIVE TAMA 2",
+        "category": "CONCERT LIVE",
+        "date": "2026-07-03",
+        "time": "21:00",
+        "description": "",
+        "image": "/images/tama.jpeg"
+    },
+    {
+        "id": 117,
+        "title": "SOIRÉE BURKINA FASO — GENÈVE",
+        "category": "SOIRÉE CULTURELLE & SOUTIEN",
+        "date": "2026-09-12",
+        "time": "16:00",
+        "status": "upcoming",
+        "description": "Soirée BURKINA FASO organisée par L'Association Nyogonben Suisse en faveur du Centre culturel Les Bambous à Bobo-Dioulasso (Entrée libre).\n\n📍 Lieu : Maison de Quartier de Saint-Jean\nChemin François-Furet 8, 1203 Genève (Suisse)\n\nAu programme :\n• 16h00 : Stands d'artisanat africain\n• 17h00 : Séance de cinéma enfants (\"Souko, Le Cinématographe en Carton\" de Issiaka Konate, animation par Aziz Ouedraogo)\n• 18h00 : Apéro en musique avec Adama Koeta (kora) et Alaye Diarra (balafon)\n• 19h00 : Repas africain sur réservation (20.- adultes / 10.- enfants de 6 à 15 ans) et vente de pâtisseries\n\n📞 Réservations (Téléphone / WhatsApp) : +41 78 614 01 55",
+        "image": "/images/soiree-burkina-faso-geneve.jpeg"
+    },
+    {
+        "id": 118,
+        "title": "LA TOURNÉE DES AMAZONES DE SYA",
+        "category": "CONCERT LIVE",
+        "date": "2026-08-21",
+        "time": "20:00",
+        "status": "upcoming",
+        "description": "Le Centre Culturel Les Bambous Idrissa Koné présente La Tournée des Amazones de Sya !\n\n📅 Vendredi 21 Août 2026\n⏰ À partir de 20h00\n📍 Lieu : Centre Culturel Siraba\n🎟️ Entrée : LIBRE\n\nVenez célébrer la musique, le rythme et l'énergie scénique exceptionnelle des Amazones de Sya lors de cette soirée mémorable.\n\nContacts & Informations :\n+226 72 48 32 21 / 65 31 14 33 / 70 33 23 44\n🌐 www.bambousbobo.com",
+        "image": "/images/tournee-amazones-de-sya.jpeg"
+    }
+]

@@ -1,0 +1,250 @@
+/* src/styles/SoutienPage.css */
+
+.soutien-page {
+    overflow-x: hidden;
+}
+
+.anonymity-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-light);
+    padding: 0.5rem 1.2rem;
+    border-radius: var(--radius-full);
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+}
+
+.bg-light {
+    background-color: #f8f9fa;
+}
+
+.bg-light-green {
+    background-color: var(--color-light-green);
+    color: var(--color-text-main);
+}
+
+/* Cards */
+.support-reason-card {
+    background: var(--color-white);
+    padding: 2.5rem 1.5rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    border-bottom: 4px solid transparent;
+}
+
+.support-reason-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-bottom-color: var(--color-bamboo-green);
+}
+
+.support-reason-card h3 {
+    margin: 1.5rem 0 1rem;
+    font-size: 1.25rem;
+}
+
+.icon-primary {
+    color: var(--color-text-accent);
+}
+
+.icon-secondary {
+    color: var(--color-text-accent);
+}
+
+/* Lists */
+.feature-list {
+    margin-top: 2rem;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.text-green {
+    color: var(--color-text-accent);
+}
+
+/* Payment Methods */
+.payment-methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.payment-card {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+}
+
+.payment-card:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-md);
+}
+
+.payment-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.5rem;
+}
+
+.payment-icon.orange {
+    color: #FF7900;
+}
+
+.payment-icon.wave {
+    color: #1DB954;
+}
+
+.payment-icon.moov {
+    color: #0082CA;
+}
+
+.payment-icon.bank {
+    color: var(--color-text-main);
+}
+
+/* Bank Info Block */
+.bank-info-block {
+    background: var(--color-white);
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.bank-info-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.bank-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.detail-item label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text-main);
+    font-weight: 700;
+}
+
+.detail-item span {
+    font-family: monospace;
+    font-size: 1.1rem;
+    color: var(--color-text-main);
+    word-break: break-all;
+    font-weight: 600;
+}
+
+.bank-note {
+    margin-top: 2rem;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--color-text-main);
+}
+
+/* Transparency */
+.transparency-block {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.transparency-grid {
+    margin-top: 3rem;
+    text-align: left;
+    gap: 3rem;
+}
+
+.transparency-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-accent);
+}
+
+/* CTA */
+.heart-icon-pulse {
+    color: var(--color-text-accent);
+    margin-bottom: 2rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.cta-buttons {
+    margin-top: 2.5rem;
+}
+
+.btn-lg {
+    padding: 1.2rem 3.5rem;
+    font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .columns-2 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .reverse-mobile {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .bank-info-block {
+        padding: 1.5rem;
+    }
+
+    .bank-details-grid {
+        grid-template-columns: 1fr;
+    }
+}

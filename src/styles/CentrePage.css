@@ -1,0 +1,336 @@
+/* src/styles/CentrePage.css */
+.center-header {
+    background-color: var(--color-deep-blue);
+    color: var(--color-text-light);
+    padding: 8rem 0 5rem;
+    text-align: center;
+}
+
+.center-header h1 {
+    color: var(--color-text-light) !important;
+    margin-bottom: 1.5rem;
+}
+
+.subtitle.text-white {
+    color: var(--color-text-light);
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+/* Vision Cards */
+.vision-card,
+.mission-card {
+    background: var(--color-white);
+    padding: 4rem 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border-top: 8px solid var(--color-bamboo-green);
+    transition: all var(--transition-normal);
+}
+
+.mission-card {
+    border-top-color: var(--color-deep-blue);
+}
+
+.vision-card:hover,
+.mission-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+}
+
+.vision-card h2,
+.mission-card h2 {
+    margin-bottom: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bg-sand {
+    background-color: var(--color-off-white);
+    border-top: 1px solid var(--color-border);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 2rem 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--color-bamboo-green);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 20px 50px;
+    position: relative;
+    width: 50%;
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: -8px;
+    background-color: var(--color-golden-yellow);
+    border: 3px solid var(--color-white);
+    top: 30px;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 0 4px var(--color-bamboo-green);
+}
+
+.right .timeline-dot {
+    left: -8px;
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+.timeline-content {
+    padding: 30px;
+    background-color: var(--color-white);
+    position: relative;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.year {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1.75rem;
+    color: var(--color-text-main);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Vision Values */
+.vision-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.value-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    background: var(--color-off-white);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+}
+
+.value-item .dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-bamboo-green);
+    border-radius: 50%;
+}
+
+/* Highlights */
+.highlights-grid {
+    margin-top: 3rem;
+}
+
+.highlight-card {
+    background: var(--color-white);
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: all var(--transition-normal);
+}
+
+.highlight-card h3 {
+    color: var(--color-text-accent);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Team */
+.team-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-grid {
+    margin-top: 4rem;
+}
+
+.team-card {
+    background: #111111;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.team-card:hover {
+    border-color: rgba(255, 255, 255, 0.35);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.team-image-wrapper {
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+.team-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.team-card:hover .team-image-wrapper img {
+    transform: scale(1.1);
+}
+
+.team-info {
+    padding: 1.25rem 1.5rem 1.5rem;
+    text-align: center;
+    background: #111111;
+}
+
+.team-info h3 {
+    color: var(--color-text-light);
+    margin-bottom: 0.4rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-shadow: none;
+}
+
+.team-role {
+    color: var(--color-text-accent);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+    display: block;
+}
+
+/* Partners Marquee */
+.partners-marquee-container {
+    overflow: hidden;
+    padding: 3rem 0;
+    position: relative;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.partners-marquee-track {
+    display: flex;
+    gap: 4rem;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.partners-marquee-track:hover {
+    animation-play-state: paused;
+}
+
+.partner-logo-box {
+    width: 180px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.partner-logo-box img {
+    max-width: 100%;
+    max-height: 100%;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all var(--transition-normal);
+}
+
+.partner-logo-box:hover {
+    box-shadow: var(--shadow-md);
+    transform: scale(1.05);
+}
+
+.partner-logo-box:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50%));
+    }
+}
+
+@media (max-width: 768px) {
+
+    .grid-2,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 20px;
+        text-align: left !important;
+    }
+
+    .timeline-item.right {
+        left: 0%;
+    }
+
+    .timeline-dot {
+        left: 23px;
+        right: auto;
+    }
+
+    .partners-grid-refined {
+        gap: 1.5rem;
+    }
+
+    .partner-logo-box {
+        width: 140px;
+    }
+}

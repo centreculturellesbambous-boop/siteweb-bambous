@@ -1,0 +1,328 @@
+{
+    "siteMetadata": {
+        "title": "Centre Culturel Les Bambous Idrissa Koné",
+        "description": "Identité culturelle africaine, communauté, créativité et professionnalisme.",
+        "logo": "/images/logo ba.jpeg",
+        "contact": {
+            "address": "Rue Bakoli Barro, Secteur 01 Bobo-Dioulasso",
+            "phone": "+226 65 31 14 33 / +226 72 48 32 21",
+            "email": "asso.nyogonben@hotmail.com",
+            "socials": {
+                "facebook": "https://www.facebook.com/ccbambousBoboDioulasso",
+                "instagram": "#",
+                "youtube": "#"
+            }
+        }
+    },
+    "home": {
+        "hero": [
+            {
+                "id": 1,
+                "image": "/images/home.jpeg",
+                "title": "Ensemble pour la promotion de la culture",
+                "description": "Bienvenue au Centre Culturel Les Bambous Idrissa Koné, un espace dédié à l'excellence artistique et à la transmission des arts au plus jeunes."
+            },
+            {
+                "id": 2,
+                "image": "/images/ama.jpeg",
+                "title": "Un Carrefour de Créativité",
+                "description": "Découvrez nos programmes, nos espaces et notre vision, ensemble sauvons la culture."
+            }
+        ],
+        "presentation": {
+            "title": "À Propos du Centre",
+            "text": "Le Centre Culturel Les Bambous Idrissa Koné est une institution phare du paysage culturel burkinabè. Porté par une vision d'excellence et de partage, le centre œuvre pour la professionnalisation des artistes et le rayonnement des arts vivants.",
+            "image": "/images/arts.jpeg"
+        }
+    },
+    "spaces": [
+        {
+            "id": "La Grande Scène intérieure",
+            "title": "Grande Scène Victor Déme",
+            "description": "Un espace parfaitement equipé pour la création musicale et chorégraphique.",
+            "image": "/images/scene.jpg"
+        },
+        {
+            "id": "repetition",
+            "title": "Salle de Répétition et Studio d'Enregistrement",
+            "description": "Une salle Insonnorisé et equipée avec du matériel de qualité,idéale pour vos répétitions et enregistrements.",
+            "image": "/images/salle.jpeg"
+        },
+        {
+            "id": "scène extérieure",
+            "title": "scène extérieure",
+            "description": "Une pétite scène donnant sur la rue et pouvant accueillir plus de 100 personnes. specialement concue pour la promotions des jeunes talents, les cafés concerts, les Jam sessions.",
+            "image": "/images/live.jpg"
+        },
+        {
+            "id": "bar",
+            "title": "Un Bar",
+            "description": "Notre bar propose une cuisine locale raffinée dans un cadre artistique inspirant.",
+            "image": "/images/bar.jpg"
+        }
+    ],
+    "events": [
+        {
+            "id": 1,
+            "title": "TROUPE DJIGUIYA",
+            "category": "CONCERT LIVE",
+            "date": "2026-01-31",
+            "time": "21:00",
+            "status": "upcoming",
+            "description": "Une célébration des rythmes ancestraux avec les plus grands maîtres du Burkina.",
+            "image": "/images/djiguiya.jpg"
+        },
+        {
+            "id": 2,
+            "title": "MAYA DIYA",
+            "category": "CONCERT LIVE",
+            "date": "2026-02-13",
+            "time": "21:00",
+            "status": "upcoming",
+            "description": "Découvrez les œuvres de la nouvelle génération d'artistes plasticiens.",
+            "image": "/images/maya.jpg"
+        },
+        {
+            "id": 3,
+            "title": "COURS DE DANSE",
+            "category": "Danse",
+            "date": "2026-02-11",
+            "time": "15:00",
+            "status": "recent",
+            "description": "Un atelier intensif dirigé par des chorégraphes de renom.",
+            "image": "/images/cours-de-danse.jpg"
+        },
+        {
+            "id": 4,
+            "title": "LES FRERES UNIS",
+            "category": "CONCERT LIVE",
+            "date": "2026-01-06",
+            "time": "21:00",
+            "status": "recent",
+            "description": "Une soirée inoubliable mêlant jazz moderne et sonorités locales.",
+            "image": "/images/freresunis.jpg"
+        },
+        {
+            "id": 5,
+            "title": "JAM SESSION",
+            "category": "CONCERT LIVE",
+            "date": "2026-01-30",
+            "time": "21:00",
+            "status": "recent",
+            "description": "",
+            "image": "/images/djam.jpg"
+        },
+        {
+            "id": 117,
+            "title": "SOIRÉE BURKINA FASO — GENÈVE",
+            "category": "SOIRÉE CULTURELLE & SOUTIEN",
+            "date": "2026-09-12",
+            "time": "16:00",
+            "status": "upcoming",
+            "description": "Soirée BURKINA FASO organisée par L'Association Nyogonben Suisse en faveur du Centre culturel Les Bambous à Bobo-Dioulasso (Entrée libre).\n\n📍 Lieu : Maison de Quartier de Saint-Jean, Chemin François-Furet 8, 1203 Genève (Suisse)\n\nAu programme :\n• 16h00 : Stands d'artisanat africain\n• 17h00 : Séance de cinéma enfants (\"Souko, Le Cinématographe en Carton\" de Issiaka Konate, animation par Aziz Ouedraogo)\n• 18h00 : Apéro en musique avec Adama Koeta (kora) et Alaye Diarra (balafon)\n• 19h00 : Repas africain sur réservation (20.- adultes / 10.- enfants de 6 à 15 ans) et vente de pâtisseries\n\n📞 Réservations (Téléphone / WhatsApp) : +41 78 614 01 55",
+            "image": "/images/soiree-burkina-faso-geneve.jpeg"
+        },
+        {
+            "id": 118,
+            "title": "LA TOURNÉE DES AMAZONES DE SYA",
+            "category": "CONCERT LIVE",
+            "date": "2026-08-21",
+            "time": "20:00",
+            "status": "upcoming",
+            "description": "Le Centre Culturel Les Bambous Idrissa Koné présente La Tournée des Amazones de Sya !\n\n📅 Vendredi 21 Août 2026\n⏰ À partir de 20h00\n📍 Lieu : Centre Culturel Siraba\n🎟️ Entrée : LIBRE\n\nVenez célébrer la musique, le rythme et l'énergie scénique exceptionnelle des Amazones de Sya lors de cette soirée mémorable.\n\nContacts & Informations :\n+226 72 48 32 21 / 65 31 14 33 / 70 33 23 44\n🌐 www.bambousbobo.com",
+            "image": "/images/tournee-amazones-de-sya.jpeg"
+        }
+    ],
+    "programs": [
+        {
+            "id": 1,
+            "title": "Cours de Danse",
+            "description": "Des cours de danse africaine, contemporaine et traditionnelle ouverts à tous les niveaux. Nos chorégraphes vous guident dans la maîtrise des pas et du rythme.",
+            "image": "/images/cours-de-danse.jpg",
+            "duree": "Tous les Mercredis de 18h à 20h",
+            "niveau": "Tous niveaux",
+            "places": "Ouvertes"
+        },
+        {
+            "id": 2,
+            "title": "Ateliers de Peinture & Arts Plastiques",
+            "description": "Explorez les arts plastiques à travers des ateliers de peinture alliant techniques modernes et inspirations africaines.",
+            "image": "/images/arts plastique.jpeg",
+            "duree": "Ateliers de vacances",
+            "niveau": "Enfants à partir de 4 ans & Adultes",
+            "places": "Ouvertes"
+        },
+        {
+            "id": 3,
+            "title": "Résidences de Création",
+            "description": "Le centre accueille des artistes et compagnies en résidence pour développer et concrétiser leurs projets artistiques dans un cadre adapté.",
+            "image": "/images/st-residence.jpg",
+            "duree": "2 à 4 semaines",
+            "niveau": "Artistes professionnels",
+            "places": "Sur candidature"
+        },
+        {
+            "id": 4,
+            "title": "Camp Vacances Culture",
+            "description": "Grand rendez-vous éducatif, artistique et culturel dédié aux enfants : Musique, Chant, Danse, Peinture, Slam et Conte.",
+            "image": "/images/cvc2026.jpeg",
+            "duree": "Du 20 Juillet au 15 Août 2026",
+            "niveau": "Enfants à partir de 4 ans",
+            "places": "Ouvertes"
+        },
+        {
+            "id": 5,
+            "title": "Cours de Musique & Percussions",
+            "description": "Apprenez à jouer d'instruments traditionnels et modernes : balafon, kora, djembe, guitare et percussions pour transmettre le patrimoine.",
+            "image": "/images/formation.jpeg",
+            "duree": "Cours hebdomadaires",
+            "niveau": "Tous niveaux",
+            "places": "Ouvertes"
+        },
+        {
+            "id": 6,
+            "title": "Café-Concert & Jam Sessions",
+            "description": "Tous les vendredis soir, la terrasse s'anime pour une soirée café-concert conviviale avec scène ouverte aux artistes.",
+            "image": "/images/live.jpg",
+            "duree": "Tous les Vendredis Soir (Dès 20h30)",
+            "niveau": "Entrée Libre",
+            "places": "Ouvertes"
+        },
+        {
+            "id": 7,
+            "title": "Concerts Live sur la Grande Scène",
+            "description": "Chaque samedi soir, la Grande Scène Victor Dème vibre aux sons des artistes de la musique live et des performances scéniques.",
+            "image": "/images/scene.jpg",
+            "duree": "Tous les Samedis Soir (Dès 21h00)",
+            "niveau": "Tout public",
+            "places": "Ouvertes"
+        }
+    ],
+    "partners": [
+        {
+            "id": 1,
+            "name": "L'association Nyogonben",
+            "logo": "/images/logonp.png"
+        },
+        {
+            "id": 2,
+            "name": "KANBANDA MUSIC PROD",
+            "logo": "/images/Kambanda.jpg"
+        },
+        {
+            "id": 3,
+            "name": "SNC",
+            "logo": "/images/snc.png"
+        },
+        {
+            "id": 4,
+            "name": "RTB",
+            "logo": "/images/RTB.jpg"
+        },
+        {
+            "id": 7,
+            "name": "BBDA",
+            "logo": "/images/bbda.png"
+        }
+    ],
+    "soutien": {
+        "artists_image": "/images/soutien.jpeg",
+        "holiday_camps_image": "/images/sia.jpeg"
+    },
+    "gallery": [
+        {
+            "id": 1,
+            "type": "image",
+            "category": "Concerts",
+            "title": "Soirée de soutien aux artistes",
+            "url": "/images/soutien.jpeg"
+        },
+        {
+            "id": 2,
+            "type": "image",
+            "category": "Danse",
+            "title": "Spectacle AMA",
+            "url": "/images/ama.jpeg"
+        },
+        {
+            "id": 3,
+            "type": "image",
+            "category": "Spectacles",
+            "title": "Spectacle vivant",
+            "url": "/images/Théâtre.jpg"
+        },
+        {
+            "id": 5,
+            "type": "video",
+            "category": "Concerts",
+            "title": "Concert au Centre Culturel",
+            "url": "",
+            "videoUrl": "https://youtu.be/By465riy82M?si=guP1Bb7_Eh5ZQKVe"
+        },
+        {
+            "id": 7,
+            "type": "image",
+            "category": "Danse",
+            "title": "Répétition de danse",
+            "url": "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?q=80&w=2070&auto=format&fit=crop"
+        }
+    ],
+    "about": {
+        "intro": {
+            "title": "À propos du Centre",
+            "content": "Le Centre Culturel Les Bambous Idrissa Koné est une institution phare du paysage culturel burkinabè. Porté par une vision d'excellence et de partage, le centre œuvre pour la promotion culturelle, la création artistique, l'éducation de la jeunesse et le rayonnement des arts vivants. C'est un véritable poumon artistique au cœur de la communauté, favorisant le dialogue des cultures et l'émergence de nouveaux talents.",
+            "image": "/images/home.jpeg"
+        },
+        "highlights": [
+            {
+                "title": "Concerts & Spectacles",
+                "description": "Une programmation régulière accueillant les plus grandes voix de l'Afrique et du monde."
+            },
+            {
+                "title": "Festivals Majeurs",
+                "description": "Hôte d'événements d'envergure nationale célébrant la diversité culturelle."
+            },
+            {
+                "title": "Résidences de Création",
+                "description": "Un espace dédié à l'innovation artistique et au mentorat des jeunes créateurs."
+            }
+        ],
+        "team": [
+            {
+                "name": "Alexandre Germain Sangaré",
+                "role": "Directeur Général",
+                "image": "/images/alexa.jpeg"
+            },
+            {
+                "name": "Armel Kam",
+                "role": "Responsable de la programmation",
+                "image": "/images/armel.jpg"
+            },
+            {
+                "name": "Marianne Studer",
+                "role": "Responsable de la communication",
+                "image": "/images/marianne.jpg"
+            },
+            {
+                "name": "François Banao",
+                "role": "Gérant et Responsable adjoint à la communication",
+                "image": "/images/francois.jpg"
+            },
+            {
+                "name": "Traoré Al-Chérif",
+                "role": "Régisseur son et lumière",
+                "image": "/images/regisseur.jpeg"
+            },
+            {
+                "name": "VALENTINE SANOU BAZIE",
+                "role": "Secrétaire comptable",
+                "image": "/images/comptable.jpeg"
+            },
+            {
+                "name": "RAIMA LATIFATOU OUEDRAOGO",
+                "role": "Secrétaire Administratif",
+                "image": "/images/raima.jpeg"
+            }
+        ]
+    }
+}

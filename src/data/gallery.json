@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "type": "image",
+        "category": "Concerts",
+        "title": "Soirée de soutien aux artistes",
+        "date": "2025-11-10",
+        "url": "/images/soutien01.jpeg"
+    },
+    {
+        "id": 2,
+        "type": "image",
+        "category": "Danse",
+        "title": "Spectacle AMA",
+        "date": "2025-12-05",
+        "url": "/images/ama.jpeg"
+    },
+    {
+        "id": 3,
+        "type": "image",
+        "category": "Spectacles",
+        "title": "Spectacle vivant",
+        "date": "2026-01-15",
+        "url": "/images/Théâtre.jpg"
+    },
+    {
+        "id": 4,
+        "type": "video",
+        "category": "Présentation",
+        "title": "Video de presentation du centre culturel les Bambous idrissa Koné",
+        "date": "2026-01-06",
+        "url": "https://youtu.be/TuK9R4zef3k?si=iF7UNgnlCJ8pm3Vp"
+    },
+    {
+        "id": 5,
+        "type": "video",
+        "category": "Concerts",
+        "title": "Concert au Centre Culturel",
+        "date": "2026-02-20",
+        "videoUrl": "https://youtu.be/By465riy82M?si=guP1Bb7_Eh5ZQKVe"
+    },
+    {
+        "id": 6,
+        "type": "image",
+        "category": "Danse",
+        "title": "Répétition de danse",
+        "date": "2026-02-28",
+        "url": "/images/danse.jpg"
+    },
+    {
+        "id": 7,
+        "type": "image",
+        "category": "Résidences",
+        "title": "Résidence de création",
+        "date": "2026-03-05",
+        "url": "/images/st-residence.jpg"
+    },
+    {
+        "id": 8,
+        "type": "video",
+        "category": "Concerts",
+        "title": "10 ANS D’ART, DE PASSION ET DE CULTURE – ENSEMBLE ARTISTIQUE DE BOLOMAKOTÉ 01",
+        "date": "2026-04-15",
+        "videoUrl": "https://youtu.be/Vp3ArMnb76Y?si=IUVJi0ztOirXmZhV"
+    },
+    {
+        "id": 9,
+        "type": "video",
+        "category": "Concerts",
+        "title": "10 ANS D’ART, DE PASSION ET DE CULTURE – ENSEMBLE ARTISTIQUE DE BOLOMAKOTÉ 02",
+        "date": "2026-04-15",
+        "videoUrl": "https://youtu.be/yv07F5jQpsc?si=5ojDLdj9tTdlaICD"
+    },
+    {
+        "id": 10,
+        "type": "video",
+        "category": "Concerts",
+        "title": "10 ANS D’ART, DE PASSION ET DE CULTURE – ENSEMBLE ARTISTIQUE DE BOLOMAKOTÉ 03",
+        "date": "2026-04-15",
+        "videoUrl": "https://youtu.be/wtQxmVp6X-Q?si=aZr8uPQpn0RuWAmp"
+    },
+    {
+        "id": 11,
+        "type": "video",
+        "category": "Concerts",
+        "title": "10 ANS D’ART, DE PASSION ET DE CULTURE – ENSEMBLE ARTISTIQUE DE BOLOMAKOTÉ 04",
+        "date": "2026-04-15",
+        "videoUrl": "https://youtu.be/otJY_eleNxw"
+    },
+    {
+        "id": 12,
+        "type": "video",
+        "category": "Concerts",
+        "title": "10 ANS D’ART, DE PASSION ET DE CULTURE – ENSEMBLE ARTISTIQUE DE BOLOMAKOTÉ 05",
+        "date": "2026-04-15",
+        "videoUrl": "https://youtu.be/otJY_eleNxw"
+    }
+]

@@ -1,0 +1,205 @@
+/* ═══════════════════════════════════════════════════════════
+   Activities Slider Styles — Premium Design — Les Bambous
+   ═══════════════════════════════════════════════════════════ */
+
+.activities-slider-container {
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.activities-swiper {
+    padding: 1rem 0.5rem 3.5rem;
+}
+
+.activity-card-carousel {
+    background: #FFFFFF;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.05);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+}
+
+.activity-card-carousel:hover {
+    transform: translateY(-8px);
+    border-color: rgba(5, 150, 105, 0.35);
+    box-shadow: 0 20px 40px -10px rgba(5, 150, 105, 0.18), 0 8px 16px -4px rgba(15, 23, 42, 0.06);
+}
+
+.activity-card-banner {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+}
+
+.activity-card-banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(11, 19, 43, 0.25) 0%, rgba(11, 19, 43, 0.65) 100%);
+    pointer-events: none;
+}
+
+.activity-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.activity-card-carousel:hover .activity-card-img {
+    transform: scale(1.08);
+}
+
+.activity-badge-date {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    z-index: 2;
+    background: rgba(11, 19, 43, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #F8FAFC;
+    font-size: 0.76rem;
+    font-weight: 700;
+    padding: 0.4rem 0.85rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.activity-badge-date svg {
+    color: var(--color-golden-yellow);
+}
+
+.activity-status-pill {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 2;
+    background: linear-gradient(135deg, #10B981, #059669);
+    color: #FFFFFF;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 0.35rem 0.8rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.35);
+}
+
+.activity-card-body {
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.activity-category-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--color-bamboo-green);
+    background: var(--color-bamboo-soft);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.35rem 0.75rem;
+    border-radius: 8px;
+    width: fit-content;
+    margin-bottom: 0.85rem;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.activity-card-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+    font-family: var(--font-heading);
+}
+
+.activity-card-desc {
+    color: var(--color-text-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.activity-card-footer {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.btn-activity-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-bamboo-green);
+    font-size: 0.88rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    font-family: var(--font-heading);
+    letter-spacing: 0.02em;
+}
+
+.btn-activity-link:hover {
+    color: var(--color-bamboo-dark);
+    transform: translateX(4px);
+}
+
+/* Swiper Controls Customization */
+.activities-swiper .swiper-button-next,
+.activities-swiper .swiper-button-prev {
+    color: var(--color-text-main);
+    background: #FFFFFF;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.activities-swiper .swiper-button-next:hover,
+.activities-swiper .swiper-button-prev:hover {
+    background: var(--color-bamboo-green);
+    color: #FFFFFF;
+    border-color: var(--color-bamboo-green);
+    box-shadow: 0 10px 25px rgba(5, 150, 105, 0.35);
+    transform: scale(1.08);
+}
+
+.activities-swiper .swiper-button-next::after,
+.activities-swiper .swiper-button-prev::after {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.activities-swiper .swiper-pagination-bullet {
+    background: #CBD5E1;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.activities-swiper .swiper-pagination-bullet-active {
+    background: var(--color-bamboo-green);
+    width: 32px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(5, 150, 105, 0.4);
+}

@@ -1,0 +1,169 @@
+/* src/styles/HomePage.css */
+
+/* ── Section présentation ── */
+.presentation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4.5rem;
+    align-items: center;
+}
+
+.img-frame {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 20px 20px 0 rgba(16, 185, 129, 0.15), var(--shadow-lg);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.img-frame img {
+    width: 100%;
+    height: clamp(280px, 45vw, 520px);
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-frame:hover img {
+    transform: scale(1.05);
+}
+
+.section-tag {
+    color: var(--color-bamboo-green);
+    background: var(--color-bamboo-soft);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    font-size: 0.78rem;
+    padding: 0.35rem 1rem;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    font-family: var(--font-heading);
+}
+
+.section-tag-light {
+    color: var(--color-golden-yellow);
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    font-size: 0.78rem;
+    padding: 0.35rem 1rem;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    font-family: var(--font-heading);
+}
+
+.section-title-left {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-main);
+    line-height: 1.2;
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+}
+
+.narrative-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+}
+
+/* Section Nos Activités */
+.home-activities-section.soft-theme {
+    background: #FAFAF7;
+    border-top: 1px solid rgba(15, 23, 42, 0.06);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+    position: relative;
+}
+
+.section-title-soft {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 800;
+    color: var(--color-text-main);
+    margin-bottom: 0.75rem;
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+}
+
+.subtitle-soft {
+    color: var(--color-text-muted);
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.08rem;
+    line-height: 1.6;
+}
+
+/* Spaces Preview Section */
+.spaces-preview {
+    background: linear-gradient(160deg, #0B132B 0%, #080D1E 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.spaces-preview::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Call to Action Box */
+.cta-box {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem);
+    background: linear-gradient(135deg, #0B132B 0%, #064E3B 100%);
+    color: #FFFFFF;
+    box-shadow: 0 25px 50px -12px rgba(11, 19, 43, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 1.25rem;
+    font-family: var(--font-heading);
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    opacity: 0.9;
+    margin-bottom: 2.25rem;
+}
+
+@media (max-width: 992px) {
+    .presentation-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .img-frame {
+        margin-right: 0;
+        margin-bottom: 0;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+}

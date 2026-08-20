@@ -1,0 +1,67 @@
+:root {
+  /* Colors — Centre Culturel Les Bambous Idrissa Koné — Premium African Contemporary Palette */
+  --color-bamboo-green: #059669;    /* Vibrant Emerald Bamboo Green */
+  --color-bamboo-dark: #064E3B;     /* Deep Bamboo Forest */
+  --color-bamboo-light: #10B981;    /* Bright Fresh Emerald */
+  --color-bamboo-soft: #ECFDF5;     /* Soft Mint Background */
+
+  --color-deep-blue: #0B132B;       /* Obsidian Midnight Blue */
+  --color-navy-dark: #080D1E;       /* Ultra Dark Navy */
+  --color-golden-yellow: #F59E0B;  /* Warm Radiant Gold */
+  --color-golden-hover: #D97706;   /* Deep Amber Gold */
+  --color-ochre: #B45309;           /* Rich African Terracotta/Ochre */
+
+  --color-off-white: #FAFAF7;       /* Luxury Warm Paper White */
+  --color-sand: #F3F0E6;            /* Organic Warm Sand */
+  --color-black: #0F172A;           /* Deep Slate Black */
+  --color-white: #FFFFFF;
+
+  /* Unified Text Colors */
+  --color-text-main: #1E293B;       /* Charcoal Text */
+  --color-text-muted: #64748B;      /* Muted Slate Text */
+  --color-text-light: #F8FAFC;      /* Crisp Light Text */
+  --color-text-accent: var(--color-bamboo-green);
+
+  --color-primary: var(--color-bamboo-green);
+  --color-secondary: var(--color-deep-blue);
+  --color-accent: var(--color-golden-yellow);
+  --color-background: var(--color-off-white);
+  --color-border: rgba(15, 23, 42, 0.08);
+
+  /* Glassmorphism & Overlays */
+  --overlay-dark: rgba(8, 13, 30, 0.72);
+  --overlay-blue: rgba(11, 19, 43, 0.85);
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-bg-dark: rgba(11, 19, 43, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-blur: blur(16px);
+
+  /* Modern Typography */
+  --font-heading: 'Outfit', 'Poppins', -apple-system, sans-serif;
+  --font-body: 'Plus Jakarta Sans', 'Open Sans', -apple-system, sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layered Shadows & Ambient Glows */
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 12px 24px -6px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.03);
+  --shadow-lg: 0 24px 48px -12px rgba(15, 23, 42, 0.12), 0 12px 20px -8px rgba(15, 23, 42, 0.06);
+  --shadow-glow-green: 0 12px 30px -6px rgba(16, 185, 129, 0.3);
+  --shadow-glow-gold: 0 12px 30px -6px rgba(245, 158, 11, 0.3);
+}
