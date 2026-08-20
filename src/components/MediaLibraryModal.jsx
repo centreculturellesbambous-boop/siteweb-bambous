@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Search, Upload, Check, Copy, FolderPlus, Image as ImageIcon } from 'lucide-react';
 import '../styles/MediaLibraryModal.css';
@@ -98,7 +99,7 @@ const MediaLibraryModal = ({ isOpen, onClose, onSelectImage, currentUrl = '' }) 
         handleSelect(customUrlInput.trim());
     };
 
-    return (
+    return createPortal(
         <AnimatePresence>
             <div className="media-modal-overlay" onClick={onClose}>
                 <motion.div
@@ -236,7 +237,8 @@ const MediaLibraryModal = ({ isOpen, onClose, onSelectImage, currentUrl = '' }) 
                     </div>
                 </motion.div>
             </div>
-        </AnimatePresence>
+        </AnimatePresence>,
+        document.body
     );
 };
 
