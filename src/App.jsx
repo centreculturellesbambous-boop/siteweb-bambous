@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import { AuthProvider } from './context/AuthContext';
 import { EditModeProvider } from './context/EditModeContext';
+import { useEditMode } from './context/useEditMode';
 import './App.css';
 
 // Lazy-loaded pages for code splitting & optimal performance
