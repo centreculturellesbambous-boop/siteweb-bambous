@@ -98,8 +98,20 @@ const EditableText = ({
     return (
         <Tag className={`editable-text-wrapper ${type === 'image' ? 'editable-image-wrapper' : ''} ${className}`} onClick={handleOpenEdit} title={`Cliquer pour modifier (${label})`} {...props}>
             {children || value}
-            <button className={`editable-text-badge ${type === 'image' ? 'badge-camera' : ''}`} onClick={handleOpenEdit}>
-                {type === 'image' ? <Camera size={13} /> : <Edit3 size={12} />}
+            <button
+                type="button"
+                className={`editable-text-badge ${type === 'image' ? 'badge-camera' : ''}`}
+                onClick={handleOpenEdit}
+                title={`Cliquer pour modifier (${label})`}
+            >
+                {type === 'image' ? (
+                    <>
+                        <Camera size={14} />
+                        <span className="badge-camera-label">Changer la photo</span>
+                    </>
+                ) : (
+                    <Edit3 size={12} />
+                )}
             </button>
 
             {isEditing && (
