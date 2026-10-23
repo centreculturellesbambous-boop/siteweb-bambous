@@ -29,21 +29,25 @@
 /* ── Affiche ── */
 .event-image {
     width: 100%;
+    aspect-ratio: 3 / 4;
     overflow: hidden;
-    background-color: #0F172A;
+    background: radial-gradient(circle at center, #1E293B 0%, #080D1E 100%);
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .event-image img {
     width: 100%;
-    height: 320px;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
     display: block;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .event-card:hover .event-image img {
-    transform: scale(1.06);
+    transform: scale(1.03);
 }
 
 /* ── Pied de carte : bouton ── */

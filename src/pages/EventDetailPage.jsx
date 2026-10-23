@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar, Clock, Tag, ArrowLeft, MapPin, Share2, Phone, X, Check } from 'lucide-react';
+import { Calendar, Clock, Tag, ArrowLeft, MapPin, Share2, Phone, X, Check, ZoomIn } from 'lucide-react';
 import content from '../data/content.json';
 import extraEvents from '../data/events.json';
 import '../styles/EventDetailPage.css';
@@ -144,6 +144,7 @@ const SharePanel = ({ title, url }) => {
 const EventDetailPage = () => {
     const { id } = useParams();
     const navigate = useNavigate();
+    const [isLightboxOpen, setIsLightboxOpen] = useState(false);
     const event = ALL_EVENTS.find(e => String(e.id) === id);
 
     if (!event) {
@@ -189,10 +190,46 @@ const EventDetailPage = () => {
                     initial={{ opacity: 0, scale: 0.95, y: 20 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     transition={{ duration: 0.55, ease: 'easeOut' }}
+                    onClick={() => setIsLightboxOpen(true)}
+                    title="Cliquer pour afficher l'affiche en grand"
                 >
                     <img src={event.image} alt={event.title} className="event-detail-poster" />
+                    <div className="poster-zoom-hint">
+                        <ZoomIn size={14} /> Agrandir
+                    </div>
                 </motion.div>
             </section>
+
+            {/* ── Lightbox Plein Écran ── */}
+            <AnimatePresence>
+                {isLightboxOpen && (
+                    <motion.div
+                        className="poster-lightbox-overlay"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setIsLightboxOpen(false)}
+                    >
+                        <button
+                            className="poster-lightbox-close"
+                            onClick={() => setIsLightboxOpen(false)}
+                            aria-label="Fermer"
+                        >
+                            <X size={22} />
+                        </button>
+                        <motion.img
+                            src={event.image}
+                            alt={event.title}
+                            className="poster-lightbox-image"
+                            initial={{ scale: 0.88, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.88, opacity: 0 }}
+                            transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+                            onClick={(e) => e.stopPropagation()}
+                        />
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             {/* ── Contenu principal ── */}
             <section className="event-detail-body">

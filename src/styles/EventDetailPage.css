@@ -32,11 +32,18 @@
 .event-detail-poster-wrapper {
     position: relative;
     z-index: 1;
-    max-width: 380px;
+    max-width: 440px;
     width: 100%;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.65);
+    cursor: zoom-in;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-detail-poster-wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 35px 90px rgba(0, 0, 0, 0.75);
 }
 
 .event-detail-poster {
@@ -44,6 +51,78 @@
     height: auto;
     display: block;
     object-fit: contain;
+}
+
+.poster-zoom-hint {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: rgba(15, 23, 42, 0.85);
+    color: #F8FAFC;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+    opacity: 0.9;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.event-detail-poster-wrapper:hover .poster-zoom-hint {
+    opacity: 1;
+    background: rgba(16, 185, 129, 0.95);
+    color: #FFFFFF;
+}
+
+/* ── Lightbox Plein Écran ── */
+.poster-lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(11, 19, 43, 0.92);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    cursor: zoom-out;
+}
+
+.poster-lightbox-image {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.8);
+    cursor: default;
+}
+
+.poster-lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 10000;
+}
+
+.poster-lightbox-close:hover {
+    background: rgba(239, 68, 68, 0.9);
+    border-color: #EF4444;
+    transform: scale(1.08);
 }
 
 /* Bouton retour flottant */
