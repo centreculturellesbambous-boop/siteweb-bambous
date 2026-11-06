@@ -17,7 +17,9 @@ const DEFAULT_MEDIA_ITEMS = [
     { id: 10, label: 'Concert Maya Diya', category: 'Spectacle', url: '/images/maya.jpg' },
     { id: 11, label: 'Cours de Danse Africaine', category: 'Cours', url: '/images/cours-de-danse.jpg' },
     { id: 12, label: 'Atelier Peinture & Arts', category: 'Cours', url: '/images/arts plastique.jpeg' },
-    { id: 13, label: 'Camp Vacances Culture', category: 'Cours', url: '/images/CAMPS 00.jpeg' }
+    { id: 13, label: 'Camp Vacances Culture', category: 'Cours', url: '/images/CAMPS 00.jpeg' },
+    { id: 14, label: 'Le Foot en Direct aux Bambous', category: 'Spectacle', url: '/images/foot-en-direct.jpg' },
+    { id: 15, label: 'La Rentrée Culturelle des Bambous', category: 'Spectacle', url: '/images/rentree-culturelle-2026.jpg' }
 ];
 
 const CATEGORIES = ['Tous', 'Bâtiment', 'Spectacle', 'Cours', 'Artistes', 'Perso'];

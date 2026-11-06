@@ -141,6 +141,26 @@
             "status": "upcoming",
             "description": "Le Centre Culturel Les Bambous Idrissa Koné vous informe de la reprise de ses activités avec un grand concert live de SADA BA !\n\n📅 Date : Samedi 24 Octobre 2026\n⏰ Heure : À partir de 21h00\n📍 Lieu : Sur la Grande Scène du Centre Culturel Les Bambous Idrissa Koné\n🎟️ Entrée : 1000 F CFA\n\nVenez nombreux célébrer la reprise des activités et vivre une soirée musicale inoubliable avec SADA BA en live !\n\n📞 Contacts & Réservations :\n+226 65 31 14 33 / +226 72 48 32 21",
             "image": "/images/sada-ba-24-octobre-2026.jpg"
+        },
+        {
+            "id": 120,
+            "title": "LE FOOT EN DIRECT AUX BAMBOUS",
+            "category": "DIFFUSION DIRECT",
+            "date": "2026-11-08",
+            "time": "18:00",
+            "status": "upcoming",
+            "description": "Désormais, suivez toutes les grandes rencontres de football au Centre culturel Les Bambous Idrissa Koné !\n\nVivez la passion du ballon rond en direct sur grand écran dans une ambiance festive, chaleureuse et conviviale. Venez partager des moments inoubliables entre amis et supporters autour d'un verre.\n\n📍 Lieu : Centre Culturel Les Bambous Idrissa Koné — Bobo-Dioulasso\n📞 Infoline : +226 65 31 14 33 / +226 72 48 32 21\n🌐 Site Web : bambousbobo.com",
+            "image": "/images/foot-en-direct.jpg"
+        },
+        {
+            "id": 121,
+            "title": "LA RENTRÉE CULTURELLE DES BAMBOUS",
+            "category": "ÉVÉNEMENT CULTUREL",
+            "date": "2026-11-07",
+            "time": "17:00",
+            "status": "upcoming",
+            "description": "Le Centre Culturel Les Bambous Idrissa Koné vous convie à sa grande Rentrée Culturelle !\n\n📅 Date : Samedi 07 Novembre 2026\n⏰ Horaires : De 17H00 à 23H00\n📍 Lieu : Centre Culturel Les Bambous Idrissa Koné — Bobo-Dioulasso\n\nSous le haut parrainage du Camarade Kouenou Siaka, PDS de la Mairie de l'Arrondissement 01.\n\nAU PROGRAMME :\n• 17H00 - 18H00 : Arrivée et installation des Officiels\n• 18H15 - 18H30 : Ouverture officielle\n• 18H30 - 19H15 : Prestation de la troupe Merveilles du Faso (Avec Hamdaye Djiga)\n• 19H30 - 19H50 : Installation du public à l'intérieur du centre et présentation des activités du premier trimestre\n• 20H00 - 20H40 : Spectacle de Slam\n• 21H00 - 22H00 : Spectacle de danse avec la compagnie KATOUMA\n• 22H00 - 23H00 : Animation festive\n• 23H00 : Fin des activités\n\nNos Partenaires :\n• Association Nyogonben\n• Semaine Nationale de la Culture (SNC)\n• Mairie de l'Arrondissement 01\n\n📞 Contacts & Renseignements :\n+226 65 31 14 33 / +226 72 48 32 21\n🌐 www.bambousbobo.com",
+            "image": "/images/rentree-culturelle-2026.jpg"
         }
     ],
     "programs": [
@@ -206,6 +226,15 @@
             "duree": "Tous les Samedis Soir (Dès 21h00)",
             "niveau": "Tout public",
             "places": "Ouvertes"
+        },
+        {
+            "id": 8,
+            "title": "Le Foot en Direct aux Bambous",
+            "description": "Désormais, suivez toutes les grandes rencontres de football au Centre culturel Les Bambous Idrissa Koné sur grand écran.",
+            "image": "/images/foot-en-direct.jpg",
+            "duree": "Lors des grandes rencontres de football",
+            "niveau": "Tout public",
+            "places": "Entrée libre"
         }
     ],
     "activities": [
@@ -271,6 +300,15 @@
             "statusBadge": "ATELIER",
             "image": "/images/arts plastique.jpeg",
             "description": "Explorez les arts plastiques à travers des ateliers de peinture alliant techniques modernes et inspirations africaines."
+        },
+        {
+            "id": "foot-en-direct",
+            "title": "Le Foot en Direct aux Bambous",
+            "category": "Diffusion Direct",
+            "dates": "Toutes les grandes rencontres de football",
+            "statusBadge": "DIRECT",
+            "image": "/images/foot-en-direct.jpg",
+            "description": "Suivez toutes les grandes rencontres de football en direct sur grand écran au Centre culturel Les Bambous Idrissa Koné dans une ambiance festive et conviviale."
         }
     ],
     "partners": [

@@ -28,7 +28,7 @@ const EventsPage = () => {
     const [statusFilter, setStatusFilter] = useState('Tous');
     const [searchQuery, setSearchQuery] = useState('');
 
-    const categories = ['Tous', 'CONCERT LIVE', 'Danse', 'Théâtre', 'Exposition', 'MODE', 'Ateliers', 'Cinéma', 'Résidence de Création', 'Tournée'];
+    const categories = ['Tous', 'CONCERT LIVE', 'ÉVÉNEMENT CULTUREL', 'DIFFUSION DIRECT', 'Danse', 'Théâtre', 'Exposition', 'MODE', 'Ateliers', 'Cinéma', 'Résidence de Création', 'Tournée'];
 
     // ─── Filtres ──────────────────────────────────────────────────────────────
     const upcomingEvents = ALL_EVENTS

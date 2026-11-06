@@ -75,6 +75,15 @@ const DEFAULT_ACTIVITIES = [
         statusBadge: 'ATELIER',
         image: '/images/arts plastique.jpeg',
         description: 'Explorez les arts plastiques à travers des ateliers de peinture alliant techniques modernes et inspirations africaines.'
+    },
+    {
+        id: 'foot-en-direct',
+        title: 'Le Foot en Direct aux Bambous',
+        category: 'Diffusion Direct',
+        dates: 'Toutes les grandes rencontres de football',
+        statusBadge: 'DIRECT',
+        image: '/images/foot-en-direct.jpg',
+        description: 'Suivez toutes les grandes rencontres de football en direct sur grand écran au Centre culturel Les Bambous Idrissa Koné dans une ambiance festive et conviviale.'
     }
 ];
 
