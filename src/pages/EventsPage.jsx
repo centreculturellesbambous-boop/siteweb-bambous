@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Calendar as CalendarIcon, Clock } from 'lucide-react';
 import EventCard from '../components/EventCard';
-import content from '../data/content.json';
+import { subscribeToContent } from '../lib/contentService';
+import initialContent from '../data/content.json';
 import extraEvents from '../data/events.json';
 import '../styles/EventsPage.css';
 
@@ -16,28 +17,46 @@ const computeStatus = (dateStr) => {
 };
 
 // Fusion content.json + events.json (sans doublon)
-const baseIds = new Set(content.events.map(e => String(e.id)));
-const ALL_EVENTS = [
-    ...content.events,
-    ...extraEvents.filter(e => !baseIds.has(String(e.id))),
-].map(e => ({ ...e, status: computeStatus(e.date) }));
+const loadAllEvents = (contentData) => {
+    const baseEvents = (contentData && contentData.events) || initialContent.events || [];
+    const baseIds = new Set(baseEvents.map(e => String(e.id)));
+    const newOnes = extraEvents.filter(e => !baseIds.has(String(e.id)));
+    return [...baseEvents, ...newOnes];
+};
 
 // ─── Composant principal ───────────────────────────────────────────────────────
 const EventsPage = () => {
+    const [siteContent, setSiteContent] = useState(initialContent);
+
+    useEffect(() => {
+        const unsub = subscribeToContent(({ content }) => {
+            if (content) setSiteContent(content);
+        });
+        return () => unsub();
+    }, []);
+
     const [filter, setFilter] = useState('Tous');
     const [statusFilter, setStatusFilter] = useState('Tous');
     const [searchQuery, setSearchQuery] = useState('');
 
     const categories = ['Tous', 'CONCERT LIVE', 'ÉVÉNEMENT CULTUREL', 'DIFFUSION DIRECT', 'Danse', 'Théâtre', 'Exposition', 'MODE', 'Ateliers', 'Cinéma', 'Résidence de Création', 'Tournée'];
 
-    // ─── Filtres ──────────────────────────────────────────────────────────────
-    const upcomingEvents = ALL_EVENTS
-        .filter(e => e.status === 'upcoming')
-        .sort((a, b) => new Date(a.date) - new Date(b.date));
+    // ─── Filtres dynamiques ──────────────────────────────────────────────────
+    const allEvents = useMemo(() =>
+        loadAllEvents(siteContent).map(e => ({ ...e, status: computeStatus(e.date) })),
+        [siteContent]);
 
-    const recentEvents = ALL_EVENTS
-        .filter(e => e.status === 'recent')
-        .sort((a, b) => new Date(b.date) - new Date(a.date));
+    const upcomingEvents = useMemo(() =>
+        allEvents
+            .filter(e => e.status === 'upcoming')
+            .sort((a, b) => new Date(a.date) - new Date(b.date)),
+        [allEvents]);
+
+    const recentEvents = useMemo(() =>
+        allEvents
+            .filter(e => e.status === 'recent')
+            .sort((a, b) => new Date(b.date) - new Date(a.date)),
+        [allEvents]);
 
     const filterEvents = (list) => list.filter(e => {
         const matchesCategory = filter === 'Tous' || e.category === filter;

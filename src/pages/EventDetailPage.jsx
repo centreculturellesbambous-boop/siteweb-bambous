@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, Clock, Tag, ArrowLeft, MapPin, Share2, Phone, X, Check, ZoomIn } from 'lucide-react';
-import content from '../data/content.json';
+import { subscribeToContent } from '../lib/contentService';
+import initialContent from '../data/content.json';
 import extraEvents from '../data/events.json';
 import '../styles/EventDetailPage.css';
 
 // ── Fusion des deux sources ──────────────────────────────────────────────────
-const baseIds = new Set(content.events.map(e => String(e.id)));
-const ALL_EVENTS = [
-    ...content.events,
-    ...extraEvents.filter(e => !baseIds.has(String(e.id))),
-];
+const loadAllEvents = (contentData) => {
+    const baseEvents = (contentData && contentData.events) || initialContent.events || [];
+    const baseIds = new Set(baseEvents.map(e => String(e.id)));
+    const newOnes = extraEvents.filter(e => !baseIds.has(String(e.id)));
+    return [...baseEvents, ...newOnes];
+};
 
 // ── Rendu de la description (supporte \n et listes à puces) ─────────────────
 const RichDescription = ({ text }) => {
@@ -145,7 +147,17 @@ const EventDetailPage = () => {
     const { id } = useParams();
     const navigate = useNavigate();
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);
-    const event = ALL_EVENTS.find(e => String(e.id) === id);
+    const [siteContent, setSiteContent] = useState(initialContent);
+
+    useEffect(() => {
+        const unsub = subscribeToContent(({ content }) => {
+            if (content) setSiteContent(content);
+        });
+        return () => unsub();
+    }, []);
+
+    const allEvents = useMemo(() => loadAllEvents(siteContent), [siteContent]);
+    const event = allEvents.find(e => String(e.id) === id);
 
     if (!event) {
         return (
@@ -165,7 +177,7 @@ const EventDetailPage = () => {
 
     const showTime = event.time && event.time !== '00:00';
 
-    const related = ALL_EVENTS
+    const related = allEvents
         .filter(e => String(e.id) !== id && e.category === event.category)
         .slice(0, 3);
 
