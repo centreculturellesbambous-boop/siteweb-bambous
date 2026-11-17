@@ -56,18 +56,24 @@ const sha256 = (() => {
 })();
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  CONFIGURATION DE SÉCURITÉ
+//  CONFIGURATION DE SÉCURITÉ & IDENTIFIANTS
 // ─────────────────────────────────────────────────────────────────────────────
 
-const ADMIN_USERNAME = 'admin';
-// Hash SHA-256 de : bambous@2026
-const ADMIN_PASSWORD_HASH = 'd364174e4b80e18dc7c4abca5be8a882c07ce4769211de09c92cfaf73024c0f2';
+// Identifiants administrateur mis à jour le 17/11/2026 suite au cambriolage/vol
+const ADMIN_USERNAME = 'bambous_admin';
 
-const AUTH_TOKEN_KEY = 'bambous_session_token';
-const AUTH_EXPIRY_KEY = 'bambous_session_expiry';
-const AUTH_SIGN_KEY = 'bambous_session_sign';
-const LOCKOUT_KEY = 'bambous_lockout';
-const ATTEMPTS_KEY = 'bambous_attempts';
+// Hash SHA-256 du nouveau mot de passe fort : Bambous@Securite2026!Bobo
+const ADMIN_PASSWORD_HASH = '3f228e2219d2476ecb908ef6f7afaa2225b13feb86bb45633f40cae878531720';
+
+// Sel cryptographique de session invalidant toutes les sessions créées avant le vol
+const SESSION_SALT = 'revocation_stolen_devices_20261117_epoch2';
+
+// Nouvelles clés de session v2 (invalide immédiatement les sessions en cache des PC/téléphones volés)
+const AUTH_TOKEN_KEY = 'bambous_session_token_v2';
+const AUTH_EXPIRY_KEY = 'bambous_session_expiry_v2';
+const AUTH_SIGN_KEY = 'bambous_session_sign_v2';
+const LOCKOUT_KEY = 'bambous_lockout_v2';
+const ATTEMPTS_KEY = 'bambous_attempts_v2';
 
 const MAX_ATTEMPTS = 5;
 const LOCKOUT_DURATION = 30 * 60000;  // 30 minutes
@@ -88,7 +94,7 @@ const generateSessionToken = () => {
     }
 };
 
-const signToken = (token, expiry) => sha256(`${token}:${expiry}:${navigator.userAgent}`);
+const signToken = (token, expiry) => sha256(`${token}:${expiry}:${SESSION_SALT}:${navigator.userAgent}`);
 
 // ─────────────────────────────────────────────────────────────────────────────
 //  VERROUILLAGE
@@ -125,17 +131,30 @@ const resetAttempts = () => {
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  SESSION
+//  SESSION & RÉVOCATION
 // ─────────────────────────────────────────────────────────────────────────────
 
 const clearSession = () => {
     localStorage.removeItem(AUTH_TOKEN_KEY);
     localStorage.removeItem(AUTH_EXPIRY_KEY);
     localStorage.removeItem(AUTH_SIGN_KEY);
+
+    // Révocation rétroactive : nettoyer tous les anciens tokens des appareils volés
+    localStorage.removeItem('bambous_session_token');
+    localStorage.removeItem('bambous_session_expiry');
+    localStorage.removeItem('bambous_session_sign');
+    localStorage.removeItem('bambous_lockout');
+    localStorage.removeItem('bambous_attempts');
 };
 
 const isSessionValid = () => {
     try {
+        // Si d'anciens identifiants compromis sont détectés, les purger immédiatement
+        if (localStorage.getItem('bambous_session_token')) {
+            clearSession();
+            return false;
+        }
+
         const token = localStorage.getItem(AUTH_TOKEN_KEY);
         const expiry = localStorage.getItem(AUTH_EXPIRY_KEY);
         const sign = localStorage.getItem(AUTH_SIGN_KEY);
@@ -174,7 +193,8 @@ export const AuthProvider = ({ children }) => {
         }
 
         // 2. Comparer les hash (pur JS, synchrone)
-        const userOk = sha256(username) === sha256(ADMIN_USERNAME);
+        const trimmedUser = (username || '').trim().toLowerCase();
+        const userOk = sha256(trimmedUser) === sha256(ADMIN_USERNAME) || sha256(trimmedUser) === sha256('admin');
         const passOk = sha256(password) === ADMIN_PASSWORD_HASH;
 
         if (!userOk || !passOk) {
