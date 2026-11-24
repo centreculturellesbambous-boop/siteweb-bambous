@@ -193,5 +193,15 @@
         "status": "upcoming",
         "description": "Le Centre Culturel Les Bambous Idrissa Koné vous présente :\nLE TREMPLIN DES ARTISTES AVEC LES FRÈRES UNIS !\n\n📅 Prochain rendez-vous : Vendredi 13 Novembre 2026\n⏰ Heure : À partir de 19H00\n🎟️ Entrée : LIBRE\n📍 Lieu : Centre Culturel Les Bambous Idrissa Koné — Bobo-Dioulasso\n\nRetrouvez le groupe Les Frères Unis tous les 02 premiers vendredis de chaque mois pour célébrer la musique live et révéler de nouveaux talents de la scène musicale !\n\nPartenaires :\n• Association Nyogonben\n• Semaine Nationale de la Culture (SNC)\n• D'Tenkono Music\n• Chipack Prod\n\n📞 Infoline & Réservations :\n+226 76 65 24 92 / +226 66 79 13 92\n🌐 www.bambousbobo.com",
         "image": "https://raw.githubusercontent.com/centreculturellesbambous-boop/siteweb-bambous/main/public/images/freres-unis-novembre-2026.jpg"
-    }
+    },
+  {
+    "id": 123,
+    "title": "SORTIE DE RÉSIDENCE — DE L'OMBRE À LA LUMIÈRE",
+    "category": "Résidence de Création",
+    "date": "2026-11-28",
+    "time": "15:00",
+    "status": "upcoming",
+    "description": "Afrikan'Da vous invite à la Sortie de Résidence d'Écriture du Livre :\n« De l'ombre à la Lumière — Je m'écris en slam » par Moulaye Rachid TEFFIAN (Rh Moulaye).\n\n📅 Date : Samedi 28 Novembre 2026\n⏰ Heure : À partir de 15H00 GMT\n📍 Lieu : Centre Culturel Les Bambous Idrissa Koné — Bobo-Dioulasso\n\nVenez découvrir cet ouvrage poétique et vibrant né d'un travail d'écriture slam immersif au cœur des mots et des émotions.\n\nPartenaires :\n• BBDA (Bureau Burkinabè du Droit d'Auteur)\n• Centre Culturel Les Bambous Idrissa Koné\n• Kalamou\n• Simi Djigui\n\n🌐 www.bambousbobo.com",
+    "image": "https://raw.githubusercontent.com/centreculturellesbambous-boop/siteweb-bambous/main/public/images/sortie-residence-slam-2026.jpg"
+  }
 ]
