@@ -146,7 +146,7 @@
       "id": 120,
       "title": "LE FOOT EN DIRECT AUX BAMBOUS",
       "category": "DIFFUSION DIRECT",
-      "date": "2026-11-08",
+      "date": "2026-11-29",
       "time": "18:00",
       "status": "upcoming",
       "description": "Désormais, suivez toutes les grandes rencontres de football au Centre culturel Les Bambous Idrissa Koné !\n\nVivez la passion du ballon rond en direct sur grand écran dans une ambiance festive, chaleureuse et conviviale. Venez partager des moments inoubliables entre amis et supporters autour d'un verre.\n\n📍 Lieu : Centre Culturel Les Bambous Idrissa Koné — Bobo-Dioulasso\n📞 Infoline : +226 65 31 14 33 / +226 72 48 32 21\n🌐 Site Web : bambousbobo.com",
@@ -181,15 +181,35 @@
       "status": "upcoming",
       "description": "Afrikan'Da vous invite à la Sortie de Résidence d'Écriture du Livre :\n« De l'ombre à la Lumière — Je m'écris en slam » par Moulaye Rachid TEFFIAN (Rh Moulaye).\n\n📅 Date : Samedi 28 Novembre 2026\n⏰ Heure : À partir de 15H00 GMT\n📍 Lieu : Centre Culturel Les Bambous Idrissa Koné — Bobo-Dioulasso\n\nVenez découvrir cet ouvrage poétique et vibrant né d'un travail d'écriture slam immersif au cœur des mots et des émotions.\n\nPartenaires :\n• BBDA (Bureau Burkinabè du Droit d'Auteur)\n• Centre Culturel Les Bambous Idrissa Koné\n• Kalamou\n• Simi Djigui\n\n🌐 www.bambousbobo.com",
       "image": "https://raw.githubusercontent.com/centreculturellesbambous-boop/siteweb-bambous/main/public/images/sortie-residence-slam-2026.jpg"
+    },
+    {
+      "id": 124,
+      "title": "COURS DE DANSE TRADITIONNELLE AVEC FARAGE BARKA",
+      "category": "Formation & Danse",
+      "date": "2026-11-25",
+      "time": "18:00",
+      "status": "upcoming",
+      "description": "Le Centre Culturel Les Bambous Idrissa Koné vous présente :\nCOURS DE DANSE TRADITIONNELLE AVEC FARAGE BARKA !\n\n📅 Fréquence : Tous les Mercredis\n⏰ Heure : À partir de 18H00\n📍 Lieu : Centre Culturel Les Bambous Idrissa Koné — Bobo-Dioulasso\n\nVenez apprendre, vous perfectionner et vibrer au rythme des danses traditionnelles guidé par l'artiste et chorégraphe Farage Barka !\n\nPartenaires :\n• Association Nyogonben\n• Cie Fereen\n\n📞 Infoline & WhatsApp :\n+226 76 55 35 16\n🌐 www.bambousbobo.com",
+      "image": "https://raw.githubusercontent.com/centreculturellesbambous-boop/siteweb-bambous/main/public/images/cours-danse-traditionnelle.jpg"
+    },
+    {
+      "id": 125,
+      "title": "COURS DE MUSIQUE & DE CHANT (ENFANTS & ADULTES)",
+      "category": "Formation Musicale",
+      "date": "2026-11-26",
+      "time": "16:00",
+      "status": "upcoming",
+      "description": "Le Centre Culturel Les Bambous Idrissa Koné vous présente :\nCOURS DE MUSIQUE & DE CHANT !\n\n👥 Public : Pour enfants et adultes • Débutants bienvenus\n🎸 Instruments enseignés :\n• Djembé • Kora • Doun-doun • Balafon\n• Guitare • Piano • Batterie • Chant & solfège\n\n✨ Particularités :\n• Instruments disponibles directement au centre pour l'apprentissage\n• Cours sur rendez-vous\n• Des tarifs accessibles pour apprendre et progresser à votre rythme\n\n📍 Lieu : Centre Culturel Les Bambous Idrissa Koné — Bobo-Dioulasso\n\nPartenaires :\n• Association Nyogonben\n• Semaine Nationale de la Culture (SNC)\n\n📞 Infoline & Inscriptions :\n+226 65 31 14 33 / +226 72 48 32 21\n🌐 www.bambousbobo.com",
+      "image": "https://raw.githubusercontent.com/centreculturellesbambous-boop/siteweb-bambous/main/public/images/cours-musique-chant.jpg"
     }
   ],
   "programs": [
     {
       "id": 1,
-      "title": "Cours de Danse",
-      "description": "Des cours de danse africaine, contemporaine et traditionnelle ouverts à tous les niveaux. Nos chorégraphes vous guident dans la maîtrise des pas et du rythme.",
-      "image": "/images/cours-de-danse.jpg",
-      "duree": "Tous les Mercredis de 18h à 20h",
+      "title": "Cours de Danse Traditionnelle avec Farage Barka",
+      "description": "Cours de danse traditionnelle animés par Farage Barka. Venez apprendre et vous perfectionner dans un cadre chaleureux et dynamique. Contact : +226 76 55 35 16.",
+      "image": "https://raw.githubusercontent.com/centreculturellesbambous-boop/siteweb-bambous/main/public/images/cours-danse-traditionnelle.jpg",
+      "duree": "Tous les Mercredis dès 18h00",
       "niveau": "Tous niveaux",
       "places": "Ouvertes"
     },
@@ -222,10 +242,10 @@
     },
     {
       "id": 5,
-      "title": "Cours de Musique & Percussions",
-      "description": "Apprenez à jouer d'instruments traditionnels et modernes : balafon, kora, djembe, guitare et percussions pour transmettre le patrimoine.",
-      "image": "/images/formation.jpeg",
-      "duree": "Cours hebdomadaires",
+      "title": "Cours de Musique & de Chant",
+      "description": "Pour enfants et adultes, débutants bienvenus. Djembé, Kora, Doun-doun, Balafon, Guitare, Piano, Batterie, Chant & solfège. Instruments disponibles au centre. Contacts : +226 65 31 14 33 / +226 72 48 32 21.",
+      "image": "https://raw.githubusercontent.com/centreculturellesbambous-boop/siteweb-bambous/main/public/images/cours-musique-chant.jpg",
+      "duree": "Sur rendez-vous",
       "niveau": "Tous niveaux",
       "places": "Ouvertes"
     },
@@ -250,9 +270,9 @@
     {
       "id": 8,
       "title": "Le Foot en Direct aux Bambous",
-      "description": "Désormais, suivez toutes les grandes rencontres de football au Centre culturel Les Bambous Idrissa Koné sur grand écran.",
-      "image": "/images/foot-en-direct.jpg",
-      "duree": "Lors des grandes rencontres de football",
+      "description": "Suivez toutes les grandes rencontres de football en direct sur grand écran au Centre Culturel Les Bambous Idrissa Koné. Contacts : +226 65 31 14 33 / +226 72 48 32 21.",
+      "image": "https://raw.githubusercontent.com/centreculturellesbambous-boop/siteweb-bambous/main/public/images/foot-en-direct.jpg",
+      "duree": "Grandes rencontres de foot",
       "niveau": "Tout public",
       "places": "Entrée libre"
     }
@@ -260,12 +280,12 @@
   "activities": [
     {
       "id": "cours-de-danse",
-      "title": "Cours de Danse",
+      "title": "Cours de Danse Traditionnelle avec Farage Barka",
       "category": "Danse",
-      "dates": "Tous les Mercredis de 18h à 20h",
+      "dates": "Tous les Mercredis dès 18h00",
       "statusBadge": "HEBDOMADAIRE",
-      "image": "/images/cours-de-danse.jpg",
-      "description": "Cours de danse africaine, contemporaine et traditionnelle ouverts à tous les niveaux."
+      "image": "https://raw.githubusercontent.com/centreculturellesbambous-boop/siteweb-bambous/main/public/images/cours-danse-traditionnelle.jpg",
+      "description": "Cours de danse traditionnelle avec Farage Barka tous les mercredis à partir de 18h00. Contact & WhatsApp : +226 76 55 35 16."
     },
     {
       "id": "camp-vacances-2026",
@@ -278,12 +298,12 @@
     },
     {
       "id": "cours-de-musique",
-      "title": "Cours de Musique & Percussions",
-      "category": "Musique",
-      "dates": "Cours hebdomadaires",
-      "statusBadge": "PERMANENT",
-      "image": "/images/formation.jpeg",
-      "description": "Apprentissage d'instruments traditionnels et modernes : balafon, kora, djembe, guitare et percussions."
+      "title": "Cours de Musique & de Chant",
+      "category": "Musique & Chant",
+      "dates": "Sur Rendez-vous (Enfants & Adultes)",
+      "statusBadge": "INSCRIPTIONS",
+      "image": "https://raw.githubusercontent.com/centreculturellesbambous-boop/siteweb-bambous/main/public/images/cours-musique-chant.jpg",
+      "description": "Djembé, Kora, Doun-doun, Balafon, Guitare, Piano, Batterie, Chant & solfège. Instruments disponibles au centre. Contacts : +226 65 31 14 33 / +226 72 48 32 21."
     },
     {
       "id": "residences-de-creation",
@@ -327,8 +347,8 @@
       "category": "Diffusion Direct",
       "dates": "Toutes les grandes rencontres de football",
       "statusBadge": "DIRECT",
-      "image": "/images/foot-en-direct.jpg",
-      "description": "Suivez toutes les grandes rencontres de football en direct sur grand écran au Centre culturel Les Bambous Idrissa Koné dans une ambiance festive et conviviale."
+      "image": "https://raw.githubusercontent.com/centreculturellesbambous-boop/siteweb-bambous/main/public/images/foot-en-direct.jpg",
+      "description": "Suivez toutes les grandes rencontres de football en direct sur écran géant au Centre culturel Les Bambous Idrissa Koné. Contacts : +226 65 31 14 33 / +226 72 48 32 21."
     },
     {
       "id": "residence-ecriture-slam",

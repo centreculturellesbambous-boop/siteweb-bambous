@@ -21,7 +21,9 @@ const DEFAULT_MEDIA_ITEMS = [
     { id: 14, label: 'Le Foot en Direct aux Bambous', category: 'Spectacle', url: '/images/foot-en-direct.jpg' },
     { id: 15, label: 'La Rentrée Culturelle des Bambous', category: 'Spectacle', url: '/images/rentree-culturelle-2026.jpg' },
     { id: 16, label: 'Tremplin des Artistes — Les Frères Unis', category: 'Spectacle', url: '/images/freres-unis-novembre-2026.jpg' },
-    { id: 17, label: "Sortie de Résidence Slam — De l'ombre à la Lumière", category: 'Spectacle', url: '/images/sortie-residence-slam-2026.jpg' }
+    { id: 17, label: "Sortie de Résidence Slam — De l'ombre à la Lumière", category: 'Spectacle', url: '/images/sortie-residence-slam-2026.jpg' },
+    { id: 18, label: 'Cours de Danse Traditionnelle — Farage Barka', category: 'Cours', url: '/images/cours-danse-traditionnelle.jpg' },
+    { id: 19, label: 'Cours de Musique & de Chant', category: 'Cours', url: '/images/cours-musique-chant.jpg' }
 ];
 
 const CATEGORIES = ['Tous', 'Bâtiment', 'Spectacle', 'Cours', 'Artistes', 'Perso'];
